@@ -1,0 +1,10 @@
+C:\Thoni\Documents\Visual Studio 2008\Projects\SSS\RsaDAL\bin\x86\Debug\Odyssey.dll
+C:\Thoni\Documents\Visual Studio 2008\Projects\SSS\RsaDAL\bin\x86\Debug\Odyssey.pdb
+C:\Thoni\Documents\Visual Studio 2008\Projects\SSS\RsaDAL\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Thoni\Documents\Visual Studio 2008\Projects\SSS\RsaDAL\obj\x86\Debug\Odyssey.dll
+C:\Thoni\Documents\Visual Studio 2008\Projects\SSS\RsaDAL\obj\x86\Debug\Odyssey.pdb
+C:\Users\default.default-PC\Documents\Visual Studio 2008\Projects\NSA2011\RsaDAL\bin\x86\Debug\Odyssey.dll
+C:\Users\default.default-PC\Documents\Visual Studio 2008\Projects\NSA2011\RsaDAL\bin\x86\Debug\Odyssey.pdb
+C:\Users\default.default-PC\Documents\Visual Studio 2008\Projects\NSA2011\RsaDAL\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\default.default-PC\Documents\Visual Studio 2008\Projects\NSA2011\RsaDAL\obj\x86\Debug\Odyssey.dll
+C:\Users\default.default-PC\Documents\Visual Studio 2008\Projects\NSA2011\RsaDAL\obj\x86\Debug\Odyssey.pdb

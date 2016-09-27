@@ -1,0 +1,13 @@
+Transaction reference= ECA05406C13B Payment reference=  Switching Bank Reference number=  card No=  apprAmt= 
+Sent Amount: 15000
+ Product ID: 4584
+ Hash: 775CA6630BE76E87997EFF8B0D805E52CA27E22407C0F8E6C5B8E9D2818E19DE8B52232B5B9C92A70D0D1075BD7ABC512452DCF6FB305FD3E0046FFD61E9C41E
+ Amount: 0
+ CardNumber: 
+ MerchantReference: 
+ PaymentReference: 
+ RetrievalReferenceNumber: 
+ LeadBankCbnCode: 
+ TransactionDate: 0001-01-01T00:00:00
+ ResponseCode: Z1
+ ResponseDescription: Transaction error

@@ -1,0 +1,13 @@
+Transaction reference=  Payment reference=  Switching Bank Reference number=  card No= 0 apprAmt= 0
+Sent Amount: 
+ Product ID: 4584
+ Hash: FD27ABC6492C43100BFCA527E5624AB02D6F42BFCF229C00B2E1FB4A661FC87B9EE0352A56F105274B93F0179518D3DD5D1A00C93C39C1A8578F1CD8FF81C908
+ Amount: 0
+ CardNumber: 
+ MerchantReference: 
+ PaymentReference: 
+ RetrievalReferenceNumber: 
+ LeadBankCbnCode: 
+ TransactionDate: 0001-01-01T00:00:00
+ ResponseCode: 20031
+ ResponseDescription: 20031 - Transaction Reference cannot be empty

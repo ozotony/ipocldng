@@ -1,0 +1,7 @@
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\bin\XPay.dll
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\bin\XPay.pdb
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\bin\Odyssey.dll
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\obj\Debug\XPay.dll
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\obj\Debug\XPay.pdb
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\obj\Debug\XPay.csprojResolveAssemblyReference.cache

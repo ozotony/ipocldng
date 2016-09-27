@@ -1,0 +1,8 @@
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\bin\cldx_tm.dll.config
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\bin\cldx_tm.dll
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\bin\cldx_tm.XmlSerializers.dll
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\bin\cldx_tm.pdb
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\obj\Release\cldx_tm.dll
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\obj\Release\cldx_tm.pdb
+C:\Users\Tony\documents\visual studio 2010\Projects\cldx_tm\cldx_tm\obj\Release\cldx_tm.XmlSerializers.dll

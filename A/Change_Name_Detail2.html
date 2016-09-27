@@ -1,0 +1,53 @@
+﻿<div class="table-responsive col-sm-12 col-md-12">
+    <table st-table="displayedCollection2" st-safe-src="ListAgent2" class="table form   col-lg-3 col-md-3  table-striped" style="font-family: Arial, Helvetica, sans-serif; font-weight: 600; ">
+        <thead>
+            <tr>
+
+
+
+
+                <th st-sort="Subject" class="tbbg2">Message</th>
+
+
+
+
+
+
+
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in displayedCollection2">
+
+
+                <td ng-bind-html="row.Message"></td>
+
+                <!--<td ng-class="{'pending-delete': add5(row)}">{{row.Message}}</td>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" class="text-center">
+                    <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

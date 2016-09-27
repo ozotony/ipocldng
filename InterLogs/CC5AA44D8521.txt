@@ -1,0 +1,13 @@
+Transaction reference= CC5AA44D8521 Payment reference= FBN|WEB|Einao|13-09-2013|030002 Switching Bank Reference number= 000000105728 card No= 0 apprAmt= 0
+Sent Amount: 45685
+ Product ID: 4584
+ Hash: A077F86F58FDB36FD1E986CF50005D40D708AF0D85F98D32E4C18330080252A217776DA8B5461AC772031A04888530A466D319B3849BC5850531C1365FDBCC0E
+ Amount: 45685
+ CardNumber: 0095
+ MerchantReference: CC5AA44D8521
+ PaymentReference: FBN|WEB|Einao|13-09-2013|030002
+ RetrievalReferenceNumber: 000000105728
+ LeadBankCbnCode: 
+ TransactionDate: 2013-09-13T16:49:07.793
+ ResponseCode: 00
+ ResponseDescription: Approved Successful

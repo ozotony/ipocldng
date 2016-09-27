@@ -1,0 +1,13 @@
+Transaction reference= 26203F711F1D Payment reference= FBN|WEB|Einao|18-09-2013|030329 Switching Bank Reference number= 000000106247 card No= 0 apprAmt= 0
+Sent Amount: 15228
+ Product ID: 4584
+ Hash: F43769BAB4ADB5EDEF46BCCE9B95E7BF890DD75CCC855F7A78D4BE0491C3F919567A29087AD1686E377B9BA980AA2494EDCDEE9B5465287E98A1352994DBFF01
+ Amount: 15228
+ CardNumber: 0095
+ MerchantReference: 26203F711F1D
+ PaymentReference: FBN|WEB|Einao|18-09-2013|030329
+ RetrievalReferenceNumber: 000000106247
+ LeadBankCbnCode: 
+ TransactionDate: 2013-09-18T21:58:43.967
+ ResponseCode: 00
+ ResponseDescription: Approved Successful

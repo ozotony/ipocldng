@@ -1,0 +1,5 @@
+C:\Users\Templar\Documents\Visual Studio 2008\Projects\bluefrost -BioMetrics\RsaDAL\bin\Release\Odyssey.dll
+C:\Users\Templar\Documents\Visual Studio 2008\Projects\bluefrost -BioMetrics\RsaDAL\bin\Release\Odyssey.pdb
+C:\Users\Templar\Documents\Visual Studio 2008\Projects\bluefrost -BioMetrics\RsaDAL\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Templar\Documents\Visual Studio 2008\Projects\bluefrost -BioMetrics\RsaDAL\obj\Release\Odyssey.dll
+C:\Users\Templar\Documents\Visual Studio 2008\Projects\bluefrost -BioMetrics\RsaDAL\obj\Release\Odyssey.pdb

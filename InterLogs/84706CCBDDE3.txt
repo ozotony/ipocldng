@@ -1,0 +1,13 @@
+Transaction reference= 84706CCBDDE3 Payment reference= FBN|WEB|Einao|16-09-2013|030100 Switching Bank Reference number= 000000105844 card No= 0 apprAmt= 0
+Sent Amount: 30457
+ Product ID: 4584
+ Hash: 7D48A47B613CCFA10487B38A03593109AC745008D9945EEBE57A18ADDEF3AFB1E528C37DA99DB5F6246A8EE3BD3D87FF5B787461B658029EADB1854415ADEA7E
+ Amount: 30457
+ CardNumber: 0095
+ MerchantReference: 84706CCBDDE3
+ PaymentReference: FBN|WEB|Einao|16-09-2013|030100
+ RetrievalReferenceNumber: 000000105844
+ LeadBankCbnCode: 
+ TransactionDate: 2013-09-16T12:05:22.933
+ ResponseCode: 00
+ ResponseDescription: Approved Successful

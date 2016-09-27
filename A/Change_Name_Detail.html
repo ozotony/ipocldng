@@ -1,0 +1,58 @@
+﻿<div class="table-responsive col-sm-12 col-md-12">
+    <table st-table="displayedCollection" st-safe-src="ListAgent" class="table form   col-lg-3 col-md-3  table-striped" >
+        <thead>
+            <tr>
+
+
+
+
+                <th st-sort="Subject" class="tbbg2">Subject</th>
+                <th st-sort="Sent_Date" class="tbbg2">Sent_Date</th>
+
+
+
+
+
+                <th class="tbbg2"></th>
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in displayedCollection">
+
+
+
+
+                <td ng-class="{'pending-delete': add5(row)}">{{row.Subject}}</td>
+
+                <td>{{row.Sent_Date }}</td>
+
+
+
+
+
+
+                <td align="center">
+
+                    <a target="_blank" ng-click="add2(row); $event.preventDefault(); $event.stopPropagation();" class="icon-bar" href="#"> <i class="glyphicon glyphicon-envelope "></i>Read Mail</a>
+                </td>
+
+
+
+
+
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" class="text-center">
+                    <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

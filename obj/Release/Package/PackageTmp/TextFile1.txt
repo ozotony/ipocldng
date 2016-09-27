@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BranchCollectRequest>
+ <MerchantDetails>
+  <Merchant DevID="NOVASYS-275033810914" MerchantCode="IPON" MerchantID="43"/>
+ </MerchantDetails> 
+ 
+<TransactionDetails> 
+<Transaction CustomerEmail="inq@grfdalleyandpartners.com" CustomerFirstname="LIEBHERR-INTERNATIONAL AG" CustomerGSM="08000000720" CustomerID="85" CustomerOthernames="Corporate" CustomerSurname="Corporate" MAC="e9a5c2c7d692466ac9b3958a0c6935ff55d452b8946185fbdb22790d3ec6face74704dd09deea71d29d46b8fe362962774883f052486eb5a046d65a7d86e2398" TotalAmount="11500.0000" TransactionID="306193477025" UpdateURL="http://iponigeria.com/miscellaneous/UpdateBranchCollect.cfm" UpdateURLThirdParty="http://iponigeria.com/miscellaneous/UpdateURLThirdParty.cfm"/> 
+ </TransactionDetails>
+ 
+<ItemDetails ExpiryDate="2013-12-12" InstallmentID="60324486" ItemCode="T003" ItemDescription="T003 (Certificate of Reg. of Trade/Service Mark)" Split="false">
+	<Item ItemAmount="11500.0000" ItemName="T003 (CERTIFICATE OF REG. OF TRADE/SERVICE MARK)"/>
+</ItemDetails> 
+ 
+ 
+ <CustomFieldDetails>
+<CustomField CustomFieldLabel="Address" CustomFieldValue="Industry Property Office Nigeria"/>
+ <CustomField CustomFieldLabel="City" CustomFieldValue="Ikeja"/>
+ <CustomField CustomFieldLabel="State" CustomFieldValue="Lagos"/>
+ <CustomField CustomFieldLabel="Country" CustomFieldValue="Nigeria"/>
+ </CustomFieldDetails>
+ <CollectionBankDetails>
+<CollectionBank CBankID="3"/>
+   </CollectionBankDetails>
+   
+    <BankAccounts> 
+   <BankDetails BankID="3">
+ <AccountDetails AccountID="75" AccountName="Fed Min of Commerce" AccountNo="1770393883" SplitAmount="10000.0000"/>
+ 
+<AccountDetails AccountID="76" AccountName="Upperlink Limited" AccountNo="1770531962" SplitAmount="100.0000"/>
+
+   <AccountDetails AccountID="77" AccountName="CLD, Ministry of Trade and Investment Collection" AccountNo="1790125721" SplitAmount="50.0000"/>
+
+   <AccountDetails AccountID="83" AccountName="Novasys Limited" AccountNo="1771168826" SplitAmount="1350.0000"/>
+ </BankDetails> 
+ </BankAccounts>
+  </BranchCollectRequest>
+
+
+  <?xml version="1.0" encoding="UTF-8"?>
+<BranchCollectResponse><RespCode>00</RespCode>
+
+<Message>Successfully Generated</Message>
+
+<TransactionID>306193477025</TransactionID>
+
+<ReferenceID>4909598543</ReferenceID>
+
+<InstallmentID>60324486</InstallmentID><CollectingBankDetails>
+
+  <BankName>Skye Bank Plc</BankName> 
+
+  <BankID>3</BankID> 
+
+</CollectingBankDetails><AcquiringBankAccountDetails>
+
+  <BankName>Skye Bank Plc</BankName> 
+
+  <BankID>3</BankID> 
+
+  <AccountName>Fed Min of Commerce</AccountName> 
+
+  <AccountNo>1770393883</AccountNo>
+
+  <AccountSettlementAmount>10000.0000</AccountSettlementAmount>
+
+</AcquiringBankAccountDetails><AcquiringBankAccountDetails>
+
+  <BankName>Skye Bank Plc</BankName> 
+
+  <BankID>3</BankID> 
+
+  <AccountName>Upperlink Limited</AccountName> 
+
+  <AccountNo>1770531962</AccountNo>
+
+  <AccountSettlementAmount>100.0000</AccountSettlementAmount>
+
+</AcquiringBankAccountDetails><AcquiringBankAccountDetails>
+
+  <BankName>Skye Bank Plc</BankName> 
+
+  <BankID>3</BankID> 
+
+  <AccountName>CLD, Ministry of Trade and Investment Collection</AccountName> 
+
+  <AccountNo>1790125721</AccountNo>
+
+  <AccountSettlementAmount>50.0000</AccountSettlementAmount>
+
+</AcquiringBankAccountDetails><AcquiringBankAccountDetails>
+
+  <BankName>Skye Bank Plc</BankName> 
+
+  <BankID>3</BankID> 
+
+  <AccountName>Novasys Limited</AccountName> 
+
+  <AccountNo>1771168826</AccountNo>
+
+  <AccountSettlementAmount>1350.0000</AccountSettlementAmount>
+
+</AcquiringBankAccountDetails></BranchCollectResponse>

@@ -1,0 +1,13 @@
+Transaction reference= 21D777A9D233 Payment reference= FBN|WEB|Einao|12-09-2013|029995 Switching Bank Reference number= 000011105149 card No= 0 apprAmt= 0
+Sent Amount: 15228
+ Product ID: 4584
+ Hash: 6F6055E3A59639C5AC4D2DA7F59F3D49554BE599166D44AA2A4F64EC0D675D8F97AD99E6610125DCCA910FEC4A3652A93735A3E91732399301F9780132728B7E
+ Amount: 0
+ CardNumber: 
+ MerchantReference: 
+ PaymentReference: 
+ RetrievalReferenceNumber: 
+ LeadBankCbnCode: 
+ TransactionDate: 0001-01-01T00:00:00
+ ResponseCode: Z6
+ ResponseDescription: 

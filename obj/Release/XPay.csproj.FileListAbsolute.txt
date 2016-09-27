@@ -1,0 +1,12 @@
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\bin\XPay.dll
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\bin\XPay.pdb
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\bin\Odyssey.dll
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\obj\Release\XPay.dll
+C:\Users\Tony\Documents\Visual Studio 2010\Projects\XPay\obj\Release\XPay.pdb
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\bin\XPay.dll
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\bin\XPay.pdb
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\bin\Odyssey.dll
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\obj\Release\XPay.dll
+C:\Users\Einao\Documents\Visual Studio 2010\Projects\XPay\obj\Release\XPay.pdb
