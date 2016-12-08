@@ -175,7 +175,7 @@ dl,dd {
 
                  <b>   <a href="./Assignment_Trademark2.aspx" >   <dl class="dl-horizontal"> <dt>  FORM 17 - </dt>  <dd>ASSIGNMENT (REQUEST TO THE REGISTRAR TO REGISTER A SUBSEQUENT PROPRIETOR OF A TRADE MARK OR TRADE MARKS UPON THE SAME DEVOLUTION OF TITLE (REGULATION 74))</dd> </dl> </a> </b>
 
-            
+              <b>   <a href="./Assignment_Trademark3.aspx" >   <dl class="dl-horizontal"> <dt>  FORM 47 - </dt>  <dd>REGISTERED USERS </dd> </dl> </a> </b>
 
             </td>
        

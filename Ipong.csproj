@@ -100,6 +100,7 @@
     <Content Include="Agent_Accreditation\Assign_Role.aspx" />
     <Content Include="A\Assignment_Trademark.aspx" />
     <Content Include="A\Assignment_Trademark2.aspx" />
+    <Content Include="A\Assignment_Trademark3.aspx" />
     <Content Include="A\Change_Name_Detail.html" />
     <Content Include="A\Change_Name_Detail2.html" />
     <Content Include="A\Change_Name_Detail2a.html" />
@@ -812,6 +813,13 @@
     </Compile>
     <Compile Include="A\Assignment_Trademark2.aspx.designer.cs">
       <DependentUpon>Assignment_Trademark2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A\Assignment_Trademark3.aspx.cs">
+      <DependentUpon>Assignment_Trademark3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A\Assignment_Trademark3.aspx.designer.cs">
+      <DependentUpon>Assignment_Trademark3.aspx</DependentUpon>
     </Compile>
     <Compile Include="A\Manual_Trademark.aspx.cs">
       <DependentUpon>Manual_Trademark.aspx</DependentUpon>

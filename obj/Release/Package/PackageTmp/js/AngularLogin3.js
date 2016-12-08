@@ -1,10 +1,10 @@
 ﻿var app = angular.module('myModule', ['smart-table', 'angular-loading-bar', 'ngMessages', '720kb.datepicker']);
 
-var serviceBaseIpo = 'http://88.150.164.30/EinaoTestEnvironment.IPO';
+var serviceBaseIpo = 'http://ipo.cldng.com';
 
-var serviceBaseCld = 'http://localhost:49703';
+var serviceBaseCld = 'http://tm.cldng.com';
 
-var serviceBasePayx = 'http://localhost:21327';
+var serviceBasePayx = 'http://payx.com.ng';
 app.factory('dataFactory', ['$http', '$q', function ($http, $q) {
 
     var urlBase = '/api/customers';
