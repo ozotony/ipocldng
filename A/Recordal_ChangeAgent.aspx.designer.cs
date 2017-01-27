@@ -13,22 +13,13 @@ namespace Ipong.A {
     public partial class Recordal_ChangeAgent {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// xname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField xname;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden xname;
         
         /// <summary>
         /// xaddress control.
@@ -37,7 +28,7 @@ namespace Ipong.A {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField xaddress;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden xaddress;
         
         /// <summary>
         /// xemail control.
@@ -46,7 +37,7 @@ namespace Ipong.A {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField xemail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden xemail;
         
         /// <summary>
         /// xPhoneNumber control.
@@ -55,7 +46,7 @@ namespace Ipong.A {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField xPhoneNumber;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden xPhoneNumber;
         
         /// <summary>
         /// xpwalletID control.
@@ -64,7 +55,7 @@ namespace Ipong.A {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField xpwalletID;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden xpwalletID;
         
         /// <summary>
         /// vsys_id control.
@@ -73,6 +64,6 @@ namespace Ipong.A {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField vsys_id;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden vsys_id;
     }
 }

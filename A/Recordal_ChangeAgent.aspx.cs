@@ -12,6 +12,7 @@ namespace Ipong.A
         public string log_date = "";
         protected string agentType = "";
         public string adminID = "0";
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if ((this.Session["agentType"] != null) && (this.Session["agentType"].ToString() != ""))

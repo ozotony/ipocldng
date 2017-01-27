@@ -40,8 +40,7 @@
 
 
     
-   <%-- <script src="../js/knockout-2.2.0.js"></script>
-    <script src="../js/Assign_Role.js"></script>--%>
+   
     <script src="../js/bootstrap.min.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
@@ -119,10 +118,10 @@
 
 <div id="welcome">
     <div style="float:left; padding:5px 0 0 10px;">
-    <img alt="Principal Photo" <%if( (Session["pic"].ToString()!="")&&(Session["pic"]!=null)){ %> src="../<%=Session["pic"].ToString() %>"<%} else { %>src="../images/shadow_male.jpg"<%} %> />
+    <img alt="Principal Photo"  src="../../admin/ag_docz/ag/1/logo_new.png" />
     </div>
-    <h1>WELCOME <%if(Session["coy_name"]!=null){Response.Write(Session["coy_name"].ToString().ToUpper());}%> </h1>
-    <img alt="Einao Solutions" <%if( (Session["logo"].ToString()!="")&&(Session["logo"]!=null)){ %> src="<%=Session["logo"].ToString() %>"<%} else { %>src="../images/einao_logo.png"<%} %>  style="width: 200px; height: 70px" /><br />
+    <h1>WELCOME ONLINE REGISTRY  OFFICE </h1>
+    <img alt="Einao Solutions"  src="../admin/ag_docz/ag/1/logo_new.png"  style="width: 200px; height: 70px" /><br />
    <span id="sc" style="font-size:12px;padding-right:10px;" ></span>
    
    <a href="http://www.iponigeria.com/#/logout" style=" font-size:12px;" >Log Out <img alt="" src="../images/LOGOUT.png" style="width: 20px; height: 20px" /></a>
@@ -135,7 +134,7 @@
 <div id='flyout_menu'>
 <ul>
    <li><a href='./profile.aspx'><span>DASHBOARD</span></a></li>
-   <li> <a href="#" onclick="postwith('<%=System.Configuration.ConfigurationManager.AppSettings["payx_home"] %>', { agentType: '<%=agentType %>', pwalletID: '<%=adminID %>' });"><span>MAKE PAYMENT</span></a></li>
+   <li> <a href="#" onclick="postwith('http://88.150.164.30/EinaoTestEnvironment.Payx/A/m_payx.aspx', { agentType: 'Agent', pwalletID: '1' });"><span>MAKE PAYMENT</span></a></li>
    <li><a href='./v_bask.aspx'><span>VIEW BASKET</span></a></li>
 
    <li><a href='#'><span>REPORTS</span></a>
@@ -163,118 +162,24 @@
 </div>
 
 <div id="x_main">
-<form id="form1" runat="server" class="form-inline" >
-    <div>
-       <%-- <div data-bind="foreach: $root.Roles">
-      
-    <input type="checkbox" data-bind="value: Role_Name(), checked: $root.associatedItemIds, click: $root.toggleAssociation" />	
-    <span data-bind="text: Role_Name"></span>
-</div>--%>
-      
-        
-        
-
-           <%--<table id="c_b"  class="table " >
-
-    <tbody  >
-
-    <tr>
-        
-      
-        <td>   Agent Code        </td>
-    
-        <td> <input  type="text" data-bind="value: Agents_Code" disabled /> <a type="button" 
-   class="btn" 
-   href="#article-editor" 
-   data-toggle="modal">Click To Select Agent</a>   </td>
-
-           <td>   First Name       </td>
-    
-        <td>  <input  data-bind="value: First_Name" type="text" disabled /> </td>
-
-          
-    </tr>   
-
-
-         <tr>
-        
-      
-        <td>  Surname       </td>
-    
-        <td>  <input data-bind="value: SurName"  type="text" disabled /> </td>
-
-           <td>   Email       </td>
-    
-        <td>  <input  type="text" data-bind="value: Email" disabled /> </td>
-
-          
-    </tr>   
-
-</tbody>
-
-</table>
-
-           <div class=" row-fluid"> 
-            <div class="span8"> 
-          <div class="modal fade" id="article-editor">
-    <div class="modal-header">
-       <a class="close" data-dismiss="modal">&times;</a>
-       <h3>Select Agent</h3>
-    </div>
-    <div class="modal-body">
-     <div id="tb">
-                 <table class="table table-bordered table-hover table-responsive " >
-<thead>
-    <tr>
-     
-        <th>Agent Code</th>
-         <th>First Name</th>
-          <th>Surname</th>
-        <th>Email</th>
-      
-    <th> </th>
-
-    
-    </tr>
-    </thead>
-<tbody data-bind="foreach: Agents">
-
-
-  
-    <tr>
-   
-        <td data-bind="text: Agent_Code"></td>
-
-         <td data-bind="text: FirstName"></td>
-
-          <td data-bind="text: SurName"></td>
-
-        <td data-bind="text: Email"></td>
-      
-     
-
-      <td> <button class="fa fa-trash-o" data-bind="click: $root.Updaterec">Select</button></td>
-       
-
-     
-       
-    </tr>   
-
-</tbody>
-</table>
-            
-            </div>
-    </div>
-    <div class="modal-footer">
-       <a href="#" class="btn" data-dismiss="modal">Close</a>
-      
-    </div>
+<form name="form1" method="post" action="Recordal_ChangeAgent.aspx" id="form1" class="form-inline">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIwMTE5MjE2OWRk30Oc6pppbvALaN97X3zZM3nDKGrlWfRg0MGHdRWrRC0=" />
 </div>
 
-            </div>
-            </div>--%>
+<div>
 
-        <%-- <button id="Button3" type="submit" data-bind="click: $root.save" class="btn-primary">Submit </button>--%>
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAfVfdozC8hNFgerDZKLjXIsvwF7M5WT4u6MMVfa0bGHEIkmlpRJoRvMwd1hcP8FaPx13eTm3AG4ZMiLcYdQXR3KFGDZDSAVjoAb+dBgl75NNI2KXfd977Hsiz/9IMyLh6ZLZmxMUPc1GQ4R6JI8Vg9ikYqdhe+vKonjDrPPK+Jj5Be14p//mvcq3dnKzhjtGKs=" />
+</div>
+    <div>
+       
+      
+        
+        
+
+           
+
+        
 <div class="container">
 
      
@@ -340,7 +245,7 @@ Enter a valid Rtm No as displayed on your Certificate Of Registration.
                    <table st-table="displayedCollection" st-safe-src="ListAgent" class="table form table-responsive  col-lg-3 col-md-3  table-striped">
         <thead>
             <tr>
-                 <%--<th  class="tbbg2">S/N</th>--%>
+                 
                 
                
                 <th st-sort="oai_no" class="tbbg2">OAI NUMBER</th>
@@ -356,7 +261,7 @@ Enter a valid Rtm No as displayed on your Certificate Of Registration.
           
            
                
-                <th  class="tbbg2">PAY</th>
+                <th  class="tbbg2">CHANGE</th>
                 
 
             </tr>
@@ -365,7 +270,7 @@ Enter a valid Rtm No as displayed on your Certificate Of Registration.
         <tbody>
             <tr ng-repeat="row in displayedCollection">
                
-              <%--  <td align="center">{{row.Sn}}</td>--%>
+              
                 
                 
                 <td >{{row.oai_no}}</td>
@@ -384,7 +289,7 @@ Enter a valid Rtm No as displayed on your Certificate Of Registration.
 
                  <td align="center">
                
-               <a target="_blank" ng-click="add2(row); $event.preventDefault(); $event.stopPropagation();" class="icon-bar" href="#"> <i class="fa  fa-paypal "></i></a>
+               <a target="_blank" ng-click="add2(row); $event.preventDefault(); $event.stopPropagation();" class="icon-bar" href="#"> <i class="fa  fa-pencil-square-o "></i></a>
             </td>
 
              
@@ -405,59 +310,21 @@ Enter a valid Rtm No as displayed on your Certificate Of Registration.
     </table>
        </div>
    
-      <asp:HiddenField ID="xname" runat="server" />
+      <input type="hidden" name="xname" id="xname" runat="server" value=" OFFICE" />
     
-     <asp:HiddenField ID="xaddress" runat="server" />
+     <input type="hidden" name="xaddress" id="xaddress" runat="server" value="AREA 1" />
 
-     <asp:HiddenField ID="xemail" runat="server" />
+     <input type="hidden" name="xemail" id="xemail" runat="server" value="einaosolutionsnigeria@gmail.com" />
 
-      <asp:HiddenField ID="xPhoneNumber" runat="server" />
+      <input type="hidden" name="xPhoneNumber" id="xPhoneNumber" runat="server" value="09038979681" />
 
-     <asp:HiddenField ID="xpwalletID" runat="server" />
+     <input type="hidden" name="xpwalletID" id="xpwalletID" runat="server" value="1" />
 
-     <asp:HiddenField ID="vsys_id" runat="server" />
+     <input type="hidden" name="vsys_id" id="vsys_id"  runat="server" value="CLD/RA/0003" />
     
 
 
-        <%--  <table class="table table-bordered table-hover table-responsive " >
-<thead>
-    <tr>
-     
-        <th>Agent Code</th>
-         <th>First Name</th>
-          <th>Surname</th>
-        <th>Role</th>
-      
-    <th> </th>
-
-    
-    </tr>
-    </thead>
-<tbody data-bind="foreach: Agents2">
-
-
-  
-    <tr>
-   
-        <td data-bind="text: Agent_Code"></td>
-
-         <td data-bind="text: FirstName"></td>
-
-          <td data-bind="text: SurName"></td>
-
-        <td data-bind="text: Email"></td>
-      
-     
-
-      <td> <button class=" btn-danger " data-bind="click: $root.Delrec">Remove</button></td>
-       
-
-     
-       
-    </tr>   
-
-</tbody>
-</table>--%>
+        
     
     </div>
     </form>
@@ -466,16 +333,12 @@ Enter a valid Rtm No as displayed on your Certificate Of Registration.
 <div id="ads2" style="color:#fff;text-align:center;">ADVERTORIALS</div>
 </div>
 
-<%--<div id="left_footer_menu">
-<a href="#">RELATED LINKS</a> | <a href="#">NEWS</a> | <a href="#">IPO WEBSITE</a> | <a href="#">PUBLICATIONS</a> | <a href="../user_guide.pdf" target="_blank">USER GUIDE</a> </div>
-<div id="right_footer_menu">EVENTS &amp; FEATURES</div>
-<div id="bottom_footer">
-   <b style="font-family:Cambria;font-size:13px;">POWERED BY<br />  <img alt="Einao Solutions" class="style2"  src="../images/einao_logo.png" /></b>
-   </div>--%>
+
 
 </div>
 <script type="text/javascript">
-    new CountUp('<%=log_date %>', 'sc', " Since logged on");
+    new CountUp('Thursday, January 26, 2017 8:16:59 PM', 'sc', " Since logged on");
     </script>
 </body>
 </html>
+

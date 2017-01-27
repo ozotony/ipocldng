@@ -162,7 +162,7 @@ function (isConfirm) {
         var online_id = dd.id
 
 
-        IpoTradeMarks3(xemail, xname, xaddress, xpwalletID, xPhoneNumber, online_id, dd.applicant_name, dd.Xaddress, dd.Xemail, dd.Xmobile)
+        IpoTradeMarks7(dd.log_staff)
 
     }
 
@@ -851,6 +851,21 @@ function ajaxindicatorstart(text) {
     jQuery('#resultLoading').fadeIn(300);
 
     jQuery('body').css('cursor', 'wait');
+
+}
+
+function IpoTradeMarks7(log_staff) {
+
+    postwith('http://45.40.139.163/EinaoTestEnvironment.CLD/admin/tm/Change_ApplicantAgent.aspx', {
+
+        //postwith('http://localhost:21327/A/m_payx.aspx', {
+
+        transID: log_staff,
+        vamount: "0",
+        vtranid: "00",
+    });
+
+
 
 }
 
