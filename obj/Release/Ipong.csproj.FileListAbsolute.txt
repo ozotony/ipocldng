@@ -36,6 +36,7 @@ C:\Einao\VS Source\Projects\Ipong\bin\EPPlus.xml
 C:\Einao\VS Source\Projects\Ipong\obj\Release\Ipong.dll
 C:\Einao\VS Source\Projects\Ipong\obj\Release\Ipong.pdb
 C:\Einao\VS Source\Projects\Ipong\obj\Release\Ipong.csprojResolveAssemblyReference.cache
+C:\Einao\VS Source\Projects\IpongBackup\bin\Ipong.dll.config
 C:\Einao\VS Source\Projects\IpongBackup\bin\Ipong.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\Ipong.pdb
 C:\Einao\VS Source\Projects\IpongBackup\bin\Brettle.Web.NeatUpload.dll
@@ -48,4 +49,3 @@ C:\Einao\VS Source\Projects\IpongBackup\bin\EPPlus.xml
 C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.dll
 C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.pdb
 C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.csprojResolveAssemblyReference.cache
-C:\Einao\VS Source\Projects\IpongBackup\bin\Ipong.dll.config

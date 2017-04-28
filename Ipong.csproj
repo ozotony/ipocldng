@@ -398,6 +398,7 @@
     <Content Include="Handlers\GetEmail.ashx" />
     <Content Include="Handlers\GetEmail2.ashx" />
     <Content Include="Handlers\GetEmailCount.ashx" />
+    <Content Include="Handlers\SaveAgent2.ashx" />
     <None Include="Script\jquery-1.4.1-vsdoc.js" />
     <Content Include="Script\App2.js" />
     <Content Include="Script\App3.js" />
@@ -408,6 +409,7 @@
     <Content Include="Script\jquery-1.4.1.js" />
     <Content Include="Script\jquery-1.4.1.min.js" />
     <Content Include="Script\jquery-2.1.1.min.js" />
+    <Content Include="Test.html" />
     <Content Include="xis\pd\tx\test_form.aspx" />
     <Content Include="xis\pd\tx\re_payment_details.aspx" />
     <Content Include="xis\pd\tx\form.aspx" />
@@ -1287,6 +1289,9 @@
     </Compile>
     <Compile Include="Handlers\SaveAgent.ashx.cs">
       <DependentUpon>SaveAgent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SaveAgent2.ashx.cs">
+      <DependentUpon>SaveAgent2.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Save_GenericApplication.ashx.cs">
       <DependentUpon>Save_GenericApplication.ashx</DependentUpon>

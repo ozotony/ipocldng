@@ -96,7 +96,8 @@ namespace Ipong.Handlers
 
         public string addAgent(Register ss)
         {
-            string str = DateTime.Today.Date.ToString("yyyy-MM-dd");
+           string str = DateTime.Today.Date.ToString("yyyy-MM-dd");
+          //  string str = DateTime.Today.Date.ToString("MM/dd/yyyy");
             string str2 = DateTime.Now.ToLongTimeString();
             string connectionString = this.Connect();
             string str4 = "0";
@@ -168,6 +169,85 @@ namespace Ipong.Handlers
             connection.Close();
 
           //  sendmail(ss.CompName, ss.Email);
+            return str4;
+        }
+
+
+        public string addAgent2(Register ss)
+        {
+            string str = DateTime.Today.Date.ToString("yyyy-MM-dd");
+            
+            string str2 = DateTime.Now.ToLongTimeString();
+            string connectionString = this.Connect();
+            string str4 = "0";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO registrations (AccrediationType,Firstname,Surname,Email,xpassword,DateOfBrith,IncorporatedDate,Nationality,PhoneNumber,CompanyName,CompanyAddress,ContactPerson,ContactPersonPhone,Certificate,Introduction,xreg_date,xstatus,logo,Principal,xvisible) VALUES (@AccrediationType,@Firstname,@Surname,@Email,@xpassword,@DateOfBrith,@IncorporatedDate,@Nationality,@PhoneNumber,@CompanyName,@CompanyAddress,@ContactPerson,@ContactPersonPhone,@Certificate,@Introduction,@xreg_date,@xstatus,@logo,@Principal,@xvisible) SELECT SCOPE_IDENTITY()";
+            connection.Open();
+            command.Parameters.Add("@AccrediationType", SqlDbType.NVarChar);
+            command.Parameters.Add("@Firstname", SqlDbType.NVarChar);
+            command.Parameters.Add("@Surname", SqlDbType.NVarChar);
+            command.Parameters.Add("@Email", SqlDbType.NVarChar);
+            command.Parameters.Add("@xpassword", SqlDbType.NVarChar);
+            command.Parameters.Add("@DateOfBrith", SqlDbType.NVarChar);
+            command.Parameters.Add("@IncorporatedDate", SqlDbType.NVarChar);
+            command.Parameters.Add("@Nationality", SqlDbType.NVarChar);
+            command.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar);
+            command.Parameters.Add("@CompanyName", SqlDbType.NVarChar);
+            command.Parameters.Add("@CompanyAddress", SqlDbType.NVarChar);
+            command.Parameters.Add("@ContactPerson", SqlDbType.NVarChar);
+            command.Parameters.Add("@ContactPersonPhone", SqlDbType.NVarChar);
+            command.Parameters.Add("@Certificate", SqlDbType.Text);
+            command.Parameters.Add("@Introduction", SqlDbType.Text);
+            command.Parameters.Add("@Principal", SqlDbType.Text);
+
+
+            command.Parameters.Add("@xreg_date", SqlDbType.NVarChar);
+
+            command.Parameters.Add("@xstatus", SqlDbType.NVarChar);
+            command.Parameters.Add("@logo", SqlDbType.NVarChar);
+            command.Parameters.Add("@xvisible", SqlDbType.NVarChar);
+
+
+
+            command.Parameters["@AccrediationType"].Value = ss.AccountType;
+            command.Parameters["@Firstname"].Value = ss.FirstName;
+            command.Parameters["@Surname"].Value = ss.Surname;
+            command.Parameters["@Email"].Value = ss.Email;
+            command.Parameters["@xpassword"].Value = ss.password;
+            command.Parameters["@DateOfBrith"].Value = ss.dob;
+            command.Parameters["@IncorporatedDate"].Value = ss.DobIncorp;
+            command.Parameters["@Nationality"].Value = ss.Nationality;
+            command.Parameters["@PhoneNumber"].Value = ss.CompPhone;
+            command.Parameters["@CompanyName"].Value = ss.CompName;
+            command.Parameters["@CompanyAddress"].Value = ss.CompAddress;
+            command.Parameters["@ContactPerson"].Value = ss.CompPerson;
+            command.Parameters["@ContactPersonPhone"].Value = ss.ContactPhone;
+            command.Parameters["@Certificate"].Value = ss.cac_file;
+            command.Parameters["@Introduction"].Value = ss.Letter_Intro_file;
+
+            command.Parameters["@xreg_date"].Value = ss.reg_date;
+            command.Parameters["@xstatus"].Value = "0";
+            command.Parameters["@logo"].Value = ss.passport_file;
+
+            command.Parameters["@xvisible"].Value = "1";
+
+            command.Parameters["@Principal"].Value = ss.passport_file;
+
+
+            foreach (SqlParameter Parameter in command.Parameters)
+            {
+                if (Parameter.Value == null)
+                {
+                    Parameter.Value = DBNull.Value;
+                }
+            }
+
+
+            str4 = command.ExecuteScalar().ToString();
+            connection.Close();
+
+            //  sendmail(ss.CompName, ss.Email);
             return str4;
         }
 

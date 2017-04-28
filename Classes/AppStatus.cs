@@ -291,7 +291,7 @@ namespace Ipong.Classes
                     this.data_status = "not-registrable";
                 }
             }
-            if (status == "5")
+            if (status == "5" || status == "11" || status == "13")
             {
                 this.status = "Publication"; this.data_status = "Being processed";
                 if (data_status == "Accepted")

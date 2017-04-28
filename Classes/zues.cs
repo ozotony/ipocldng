@@ -910,7 +910,9 @@ namespace Ipong.Classes
 
             //   command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address_service.street ,address_service.telephone1,address_service.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID    LEFT OUTER JOIN address_service ON address_service.log_staff=pwallet.ID   WHERE pwallet.stage='5' AND pwallet.status>='", status, "' AND pwallet.data_status='", data_status, "'  and pwallet.rtm ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
 
-            command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID    LEFT OUTER JOIN address ON address.ID=applicant.addressID   WHERE pwallet.stage='5' AND pwallet.data_status in ('Certified','Accepted','Opposed','Deferred','Published','kiv','Migrated','New','Registered','Not Opposed', 'Search 2 Conducted', 'Search Conducted')   and pwallet.rtm ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
+           // command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID    LEFT OUTER JOIN address ON address.ID=applicant.addressID   WHERE pwallet.stage='5' AND pwallet.data_status in ('Certified','Accepted','Opposed','Deferred','Published','kiv','Migrated','New','Registered','Not Opposed', 'Search 2 Conducted', 'Search Conducted')   and pwallet.rtm ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
+
+            command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID    LEFT OUTER JOIN address ON address.ID=applicant.addressID   WHERE pwallet.stage='5'   and pwallet.rtm ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
             //  }
             // command.CommandTimeout = 0;
             connection.Open();
@@ -999,7 +1001,7 @@ namespace Ipong.Classes
 
             //  command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address_service.street ,address_service.telephone1,address_service.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address_service ON address_service.log_staff=pwallet.ID    WHERE pwallet.stage='5' AND pwallet.status>='", status, "' AND pwallet.data_status='", data_status, "'  and mark_info.reg_number ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
 
-            command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address ON address.ID=applicant.addressID    WHERE pwallet.stage='5' AND pwallet.data_status in ('Certified','Accepted','Opposed','Deferred','Published','kiv','Migrated','New','Registered','Not Opposed', 'Search 2 Conducted', 'Search Conducted')   and mark_info.reg_number ='", pvalidation, "'    " }), connection);
+            command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address ON address.ID=applicant.addressID    WHERE pwallet.stage='5'   and mark_info.reg_number ='", pvalidation, "'    " }), connection);
             //  }
             // command.CommandTimeout = 0;
             connection.Open();
@@ -1078,6 +1080,211 @@ namespace Ipong.Classes
             connection.Close();
             return list;
         }
+
+
+        public XObjs.Office_view getNew_MarkInfoRSX8(string status,string pvalidation, int start, int limit)
+        {
+            SqlCommand command;
+            List<XObjs.Office_view> list = new List<XObjs.Office_view>();
+            new XObjs.Office_view();
+            SqlConnection connection = new SqlConnection(this.Connect2());
+
+            XObjs.Office_view item2 = new XObjs.Office_view() ;
+
+            //  command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address_service.street ,address_service.telephone1,address_service.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address_service ON address_service.log_staff=pwallet.ID    WHERE pwallet.stage='5' AND pwallet.status>='", status, "' AND pwallet.data_status='", data_status, "'  and mark_info.reg_number ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
+
+            command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff ,mark_info.logo_pic ,mark_info.auth_doc ,mark_info.sup_doc1 ,mark_info.sup_doc2 from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address ON address.ID=applicant.addressID    WHERE pwallet.stage='5'   and mark_info.reg_number ='", pvalidation, "'  and pwallet.applicantid ='", status, "'    " }), connection);
+            //  }
+            // command.CommandTimeout = 0;
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            string pp2 = "";
+            int vcount = 0;
+            int vsn = 0;
+            string voffice = "";
+            while (reader.Read())
+            {
+                vsn = vsn + 1;
+                vcount = vcount + 1;
+
+                XObjs.Registration pdd = getRegistrationBySubagentRegistrationID(reader["applicantID"].ToString());
+                //if (getTmOfficeByMID(reader["log_staff"].ToString()) != "")
+                //{
+                //    voffice = (getTmOfficeByMID(reader["log_staff"].ToString()));
+                //}
+                //else
+                //{
+                //    voffice = "None";
+                //}
+                XObjs.Office_view item = new XObjs.Office_view
+                {
+                    xid = reader["xID"].ToString(),
+                    id = reader["ID"].ToString(),
+                    rtm = reader["rtm"].ToString(),
+                    applicant_name = reader["xname"].ToString(),
+                    xclass = reader["class"].ToString(),
+                    reg_no = reader["reg_no"].ToString(),
+                    tm_type = reader["tm_type"].ToString(),
+                    product_title = reader["product_title"].ToString(),
+                    oai_no = reader["oai_no"].ToString(),
+                    xstat = reader["xstat"].ToString(),
+                    reg_dt = reader["reg_dt"].ToString(),
+                    log_staff = reader["log_staff"].ToString(),
+
+                    logo_pic = reader["logo_pic"].ToString(),
+
+                    auth_doc = reader["auth_doc"].ToString(),
+
+                    sup_doc1= reader["sup_doc1"].ToString(),
+
+                    sup_doc2 = reader["sup_doc2"].ToString(),
+                    //   batches = reader["visible"].ToString(),
+                    applicantID = reader["applicantID"].ToString(),
+
+                    //Office = reader["data_status"].ToString(),
+                    Sn = Convert.ToString(vsn),
+                    Agent_Code = pdd.Sys_ID,
+                    Agent_Name = pdd.Surname,
+                    TransactionId = reader["TransactionId"].ToString(),
+                    Xaddress = reader["street"].ToString(),
+                    Xemail = reader["email1"].ToString(),
+                    Xmobile = reader["telephone1"].ToString()
+                };
+
+                try
+                {
+                    int dw = Convert.ToInt32(reader["visible"]);
+                    if (dw > 1)
+                    {
+                        pp2 = (Convert.ToInt32(reader["visible"]) - 1).ToString();
+
+                    }
+
+                    else
+                    {
+                        pp2 = (Convert.ToInt32(reader["visible"])).ToString();
+
+                    }
+                }
+                catch (Exception ee)
+                {
+
+                }
+
+                item.batches = pp2;
+
+                item2 = item;
+               // list.Add(item);
+
+
+            }
+            reader.Close();
+            connection.Close();
+            return item2;
+        }
+
+
+        public XObjs.Office_view getNew_MarkInfoRSX9(string status, string pvalidation, int start, int limit)
+        {
+            SqlCommand command;
+            List<XObjs.Office_view> list = new List<XObjs.Office_view>();
+            new XObjs.Office_view();
+            SqlConnection connection = new SqlConnection(this.Connect2());
+
+            XObjs.Office_view item2 = new XObjs.Office_view();
+
+            //  command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address_service.street ,address_service.telephone1,address_service.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address_service ON address_service.log_staff=pwallet.ID    WHERE pwallet.stage='5' AND pwallet.status>='", status, "' AND pwallet.data_status='", data_status, "'  and mark_info.reg_number ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
+
+            command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff ,mark_info.logo_pic ,mark_info.auth_doc ,mark_info.sup_doc1 ,mark_info.sup_doc2 from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID LEFT OUTER JOIN address ON address.ID=applicant.addressID    WHERE pwallet.stage='5'   and pwallet.validationid ='", pvalidation, "'  and pwallet.applicantid ='", status, "'    " }), connection);
+            //  }
+            // command.CommandTimeout = 0;
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            string pp2 = "";
+            int vcount = 0;
+            int vsn = 0;
+            string voffice = "";
+            while (reader.Read())
+            {
+                vsn = vsn + 1;
+                vcount = vcount + 1;
+
+                XObjs.Registration pdd = getRegistrationBySubagentRegistrationID(reader["applicantID"].ToString());
+                //if (getTmOfficeByMID(reader["log_staff"].ToString()) != "")
+                //{
+                //    voffice = (getTmOfficeByMID(reader["log_staff"].ToString()));
+                //}
+                //else
+                //{
+                //    voffice = "None";
+                //}
+                XObjs.Office_view item = new XObjs.Office_view
+                {
+                    xid = reader["xID"].ToString(),
+                    id = reader["ID"].ToString(),
+                    rtm = reader["rtm"].ToString(),
+                    applicant_name = reader["xname"].ToString(),
+                    xclass = reader["class"].ToString(),
+                    reg_no = reader["reg_no"].ToString(),
+                    tm_type = reader["tm_type"].ToString(),
+                    product_title = reader["product_title"].ToString(),
+                    oai_no = reader["oai_no"].ToString(),
+                    xstat = reader["xstat"].ToString(),
+                    reg_dt = reader["reg_dt"].ToString(),
+                    log_staff = reader["log_staff"].ToString(),
+
+                    logo_pic = reader["logo_pic"].ToString(),
+
+                    auth_doc = reader["auth_doc"].ToString(),
+
+                    sup_doc1 = reader["sup_doc1"].ToString(),
+
+                    sup_doc2 = reader["sup_doc2"].ToString(),
+                    //   batches = reader["visible"].ToString(),
+                    applicantID = reader["applicantID"].ToString(),
+
+                    //Office = reader["data_status"].ToString(),
+                    Sn = Convert.ToString(vsn),
+                    Agent_Code = pdd.Sys_ID,
+                    Agent_Name = pdd.Surname,
+                    TransactionId = reader["TransactionId"].ToString(),
+                    Xaddress = reader["street"].ToString(),
+                    Xemail = reader["email1"].ToString(),
+                    Xmobile = reader["telephone1"].ToString()
+                };
+
+                try
+                {
+                    int dw = Convert.ToInt32(reader["visible"]);
+                    if (dw > 1)
+                    {
+                        pp2 = (Convert.ToInt32(reader["visible"]) - 1).ToString();
+
+                    }
+
+                    else
+                    {
+                        pp2 = (Convert.ToInt32(reader["visible"])).ToString();
+
+                    }
+                }
+                catch (Exception ee)
+                {
+
+                }
+
+                item.batches = pp2;
+
+                item2 = item;
+                // list.Add(item);
+
+
+            }
+            reader.Close();
+            connection.Close();
+            return item2;
+        }
+
 
 
         public List<XObjs.Office_view> getNew_MarkInfoRSX4(string pvalidation)

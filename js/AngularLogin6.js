@@ -1,6 +1,9 @@
 ﻿var app = angular.module('myModule', ['smart-table', 'angular-loading-bar', 'ngMessages', '720kb.datepicker']);
 
+var url = 'http://ipo.cldng.com/';
+var url2 = 'http://88.150.164.30/Payx/';
 
+var url3 = 'http://tm.cldng.com/';
 
 app.controller('myController3', ['$scope', '$http', '$rootScope', function ($scope, $http, $rootScope) {
     $scope.checked = false;
@@ -38,16 +41,16 @@ app.controller('myController3', ['$scope', '$http', '$rootScope', function ($sco
         var vk = $scope.OnlineNumber;
 
 
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate2.ashx';
+        var serviceBase =url +  'Handlers/GetCertificate2.ashx';
 
         if ($scope.Searchname == "rtm") {
-            serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate6.ashx';
+            serviceBase = url + 'Handlers/GetCertificate6.ashx';
         }
 
         else {
 
-          //  serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate7.ashx';
-            serviceBase = 'http://localhost:4556/Handlers/GetCertificate7.ashx';
+            serviceBase = url + 'Handlers/GetCertificate7.ashx';
+           // serviceBase = 'http://localhost:4556/Handlers/GetCertificate7.ashx';
         }
 
         //  var serviceBase = 'http://localhost:4556/Handlers/GetCertificate2.ashx';
@@ -158,12 +161,12 @@ function (isConfirm) {
 
         var xPhoneNumber = $("input#xPhoneNumber").val()
 
-        var xpwalletID = $("input#xpwalletID").val()
+        var xpwalletID = $("input#vsys_id").val()
 
         var online_id = dd.id
 
 
-        IpoTradeMarks7(dd.log_staff)
+        IpoTradeMarks7(dd.log_staff, xname, xaddress, xemail, xPhoneNumber, xpwalletID)
 
     }
 
@@ -206,7 +209,7 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
         var vk = $scope.OnlineNumber;
 
 
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate.ashx';
+        var serviceBase =url + 'Handlers/GetCertificate.ashx';
 
         // var serviceBase = 'http://localhost:4556/Handlers/GetRegistration.ashx';
 
@@ -313,7 +316,7 @@ app.controller('myController4', ['$scope', '$http', '$rootScope', function ($sco
         $scope.rep_xname = xname2;
         $scope.country2 = "Nigeria";
         $scope.country3 = "Nigeria";
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetRegistration3.ashx';
+        var serviceBase = url + 'Handlers/GetRegistration3.ashx';
         var Encrypt = {
             vid: xname
         }
@@ -356,7 +359,7 @@ app.controller('myController4', ['$scope', '$http', '$rootScope', function ($sco
         var vk = $scope.OnlineNumber;
 
 
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate2.ashx';
+        var serviceBase = url + 'Handlers/GetCertificate2.ashx';
 
         //  var serviceBase = 'http://localhost:4556/Handlers/GetCertificate2.ashx';
 
@@ -521,7 +524,7 @@ function (isConfirm) {
 
             $http({
                 method: 'POST',
-                url: 'http://88.150.164.30/IpoCldng/Handlers/GetState.ashx',
+                url: url + 'Handlers/GetState.ashx',
                 transformRequest: function (obj) {
                     var str = [];
                     for (var p in obj)
@@ -663,7 +666,7 @@ function (isConfirm) {
 
             formData.append("vv", JSON.stringify(AgentsData));
 
-            var url9 = "http://88.150.164.30/EinaoTestEnvironment.CLD/Handlers/Save_GenericApplication.ashx";
+            var url9 = url3 + "Handlers/Save_GenericApplication.ashx";
 
 
             $http.post(url9, formData, {
@@ -855,13 +858,18 @@ function ajaxindicatorstart(text) {
 
 }
 
-function IpoTradeMarks7(log_staff) {
+function IpoTradeMarks7(log_staff, xname, xaddress, xemail, xPhoneNumber, xpwalletID) {
 
-    postwith('http://45.40.139.163/EinaoTestEnvironment.CLD/admin/tm/Change_ApplicantAgent.aspx', {
+    postwith(url3 +'admin/tm/Change_ApplicantAgent.aspx', {
 
         //postwith('http://localhost:21327/A/m_payx.aspx', {
 
         transID: log_staff,
+        xname: xname,
+        xaddress: xaddress,
+        xemail: xemail,
+        xPhoneNumber: xPhoneNumber,
+        xpwalletID :xpwalletID,
         vamount: "0",
         vtranid: "00",
     });
