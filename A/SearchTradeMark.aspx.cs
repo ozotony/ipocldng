@@ -21,6 +21,8 @@ namespace Ipong.A
             else
             {
                 // base.Response.Redirect("../a_login.aspx");
+
+
             }
 
             if ((this.Session["pwalletID"] != null) && (this.Session["pwalletID"].ToString() != ""))

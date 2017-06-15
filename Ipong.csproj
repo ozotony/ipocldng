@@ -148,6 +148,7 @@
     <Content Include="A\Recordal_ChangeAgent.aspx" />
     <Content Include="A\Recordal_ChangeName.aspx" />
     <Content Include="A\Rectification_Trademark.aspx" />
+    <Content Include="A\RefusalAppeal.aspx" />
     <Content Include="A\Renewal_Trademark.aspx" />
     <Content Include="A\SearchDesign.aspx" />
     <Content Include="A\SearchPatent.aspx" />
@@ -342,6 +343,7 @@
     <Content Include="js\AngularLogin.js" />
     <Content Include="js\AngularLogin10.js" />
     <Content Include="js\AngularLogin11.js" />
+    <Content Include="js\AngularLogin11a.js" />
     <Content Include="js\AngularLogin3.js" />
     <Content Include="js\AngularLogin4.js" />
     <Content Include="js\AngularLogin5.js" />
@@ -399,6 +401,7 @@
     <Content Include="Handlers\GetEmail2.ashx" />
     <Content Include="Handlers\GetEmailCount.ashx" />
     <Content Include="Handlers\SaveAgent2.ashx" />
+    <Content Include="Handlers\GetRefusedApplication.ashx" />
     <None Include="Script\jquery-1.4.1-vsdoc.js" />
     <Content Include="Script\App2.js" />
     <Content Include="Script\App3.js" />
@@ -928,6 +931,13 @@
     <Compile Include="A\Rectification_Trademark.aspx.designer.cs">
       <DependentUpon>Rectification_Trademark.aspx</DependentUpon>
     </Compile>
+    <Compile Include="A\RefusalAppeal.aspx.cs">
+      <DependentUpon>RefusalAppeal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A\RefusalAppeal.aspx.designer.cs">
+      <DependentUpon>RefusalAppeal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="A\Renewal_Trademark.aspx.cs">
       <DependentUpon>Renewal_Trademark.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1258,6 +1268,9 @@
     </Compile>
     <Compile Include="Handlers\GetEmailCount.ashx.cs">
       <DependentUpon>GetEmailCount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\GetRefusedApplication.ashx.cs">
+      <DependentUpon>GetRefusedApplication.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handlers\GetRegistration.ashx.cs">
       <DependentUpon>GetRegistration.ashx</DependentUpon>

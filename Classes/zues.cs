@@ -901,6 +901,97 @@ namespace Ipong.Classes
             return list;
         }
 
+        public List<XObjs.Office_view> getNew_MarkInfoRSX33(string status, string data_status, string pvalidation, int start, int limit)
+        {
+            SqlCommand command;
+            List<XObjs.Office_view> list = new List<XObjs.Office_view>();
+            new XObjs.Office_view();
+            SqlConnection connection = new SqlConnection(this.Connect2());
+
+
+            //  command = new SqlCommand(string.Concat(new object[] { "select   pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID    LEFT OUTER JOIN address ON address.ID=applicant.addressID   WHERE pwallet.stage='5' AND pwallet.status>='", status, "'   and pwallet.validationID ='", pvalidation, "' order by pwallet.rtm DESC     " }), connection);
+
+            command = new SqlCommand(string.Concat(new object[] { "select    pwallet.rtm,pwallet.ID,pwallet.TransactionId,pwallet.visible,pwallet.applicantID,pwallet.applicantID,applicant.xname,address.street ,address.telephone1,address.email1,mark_info.national_classID 'class',mark_info.xID,mark_info.reg_number 'reg_no',mark_info.product_title,tm_type.type 'tm_type',pwallet.validationID 'oai_no', ISNULL(pwallet.data_status,'None') 'xstat', mark_info.reg_date 'reg_dt',mark_info.log_staff  from mark_info LEFT OUTER JOIN pwallet ON mark_info.log_staff=pwallet.ID   LEFT OUTER JOIN tm_type ON tm_type.xID=mark_info.tm_typeID  LEFT OUTER JOIN applicant ON applicant.log_staff=pwallet.ID    LEFT OUTER JOIN address ON address.ID=applicant.addressID   WHERE pwallet.stage='5' AND pwallet.data_status  ='", data_status, "'   and mark_info.reg_number ='", pvalidation, "'    " }), connection);
+
+            //  }
+            // command.CommandTimeout = 0;
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            string pp2 = "";
+            int vcount = 0;
+            int vsn = 0;
+            string voffice = "";
+            while (reader.Read())
+            {
+                vsn = vsn + 1;
+                vcount = vcount + 1;
+
+                XObjs.Registration pdd = getRegistrationBySubagentRegistrationID(reader["applicantID"].ToString());
+                //if (getTmOfficeByMID(reader["log_staff"].ToString()) != "")
+                //{
+                //    voffice = (getTmOfficeByMID(reader["log_staff"].ToString()));
+                //}
+                //else
+                //{
+                //    voffice = "None";
+                //}
+                XObjs.Office_view item = new XObjs.Office_view
+                {
+                    xid = reader["xID"].ToString(),
+                    id = reader["ID"].ToString(),
+                    rtm = reader["rtm"].ToString(),
+                    applicant_name = reader["xname"].ToString(),
+                    xclass = reader["class"].ToString(),
+                    reg_no = reader["reg_no"].ToString(),
+                    tm_type = reader["tm_type"].ToString(),
+                    product_title = reader["product_title"].ToString(),
+                    oai_no = reader["oai_no"].ToString(),
+                    xstat = reader["xstat"].ToString(),
+                    reg_dt = reader["reg_dt"].ToString(),
+                    log_staff = reader["log_staff"].ToString(),
+                    //   batches = reader["visible"].ToString(),
+                    applicantID = reader["applicantID"].ToString(),
+
+                    //Office = reader["data_status"].ToString(),
+                    Sn = Convert.ToString(vsn),
+                    Agent_Code = pdd.Sys_ID,
+                    Agent_Name = pdd.Surname,
+                    TransactionId = reader["TransactionId"].ToString(),
+                    Xaddress = reader["street"].ToString(),
+                    Xemail = reader["email1"].ToString(),
+                    Xmobile = reader["telephone1"].ToString()
+                };
+
+                try
+                {
+                    int dw = Convert.ToInt32(reader["visible"]);
+                    if (dw > 1)
+                    {
+                        pp2 = (Convert.ToInt32(reader["visible"]) - 1).ToString();
+
+                    }
+
+                    else
+                    {
+                        pp2 = (Convert.ToInt32(reader["visible"])).ToString();
+
+                    }
+                }
+                catch (Exception ee)
+                {
+
+                }
+
+                item.batches = pp2;
+                list.Add(item);
+
+
+            }
+            reader.Close();
+            connection.Close();
+            return list;
+        }
+
         public List<XObjs.Office_view> getNew_MarkInfoRSX6(string status, string data_status, string pvalidation, int start, int limit)
         {
             SqlCommand command;
