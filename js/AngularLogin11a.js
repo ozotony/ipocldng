@@ -1,13 +1,13 @@
 ﻿var app = angular.module('myModule', ['smart-table', 'angular-loading-bar', 'ngMessages', '720kb.datepicker', 'ngModal']);
 
-var serviceBaseIpo = 'http://88.150.164.30/EinaoTestEnvironment.IPO';
+var serviceBaseIpo = 'http://ipo.cldng.com';
 
-var serviceBaseCld = 'http://45.40.139.163/EinaoTestEnvironment.CLD/';
+var serviceBaseCld = 'http://tm.cldng.com/';
 
 //var serviceBaseCld = 'http://localhost:49703/';
 
 
-var serviceBasePayx = 'http://localhost:21327';
+var serviceBasePayx = 'http://88.150.164.30/Payx';
 app.factory('dataFactory', ['$http', '$q', function ($http, $q) {
 
     var urlBase = '/api/customers';
@@ -295,8 +295,11 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
         }).success(function (response) {
 
             swal("", "Record Submitted Successfully", "success")
+            var kx = JSON.parse(response);
+           
+            OpenWindowWithPost2(serviceBasecld + +"/admin/tm/AppealRejection4.aspx?x=" + $rootScope.vid2 + "&x2=" + kx, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile");
 
-            console.log(response)
+            console.log(JSON.parse(response))
             // var content = JSON.parse(response);
            
         }).error(function (data, status, headers, config) {
@@ -311,7 +314,7 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
     $scope.add22 = function (dd) {
 
         //  alert(dd.xid)
-        OpenWindowWithPost2("http://45.40.139.163/EinaoTestEnvironment.CLD/admin/tm/rejection_slip_details.aspx?x=" + dd.xid, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile");
+        OpenWindowWithPost2(serviceBasecld+"/admin/tm/rejection_slip_details.aspx?x=" + dd.xid, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile");
         //  $scope.detailFrame = "http://45.40.139.163/EinaoTestEnvironment.CLD/admin/tm/rejection_slip_details.aspx?x=" + dd.xid;
 
     }
@@ -441,7 +444,7 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
 
 function IpoTradeMarks2(email, name, address, vid, PhoneNumber, vonlineid, name2, address2, email2, PhoneNumber2) {
 
-    postwith('http://88.150.164.30/EinaoTestEnvironment.Payx/A/m_payx.aspx', {
+    postwith(serviceBasePayx+ '/A/m_payx.aspx', {
 
         //postwith('http://localhost:21327/A/m_payx.aspx', {
 

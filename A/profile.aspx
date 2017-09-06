@@ -28,7 +28,32 @@
         showClock();
         </script>
 
+   
 
+    <style type="text/css">
+        #flyout_menu2 {
+            position:relative;
+        }
+
+         #flyout_menu2 a {
+            position:absolute;
+            top:1px;
+            left:10%
+        }
+
+         #kad {
+ position:absolute;
+            top:70px;
+            left:1%
+
+         }
+
+         #kad a {
+            display:inline-block;
+            padding-top:2px;
+             padding-left:14px;
+         }
+    </style>
    
 </head>
 <body ng-controller="formController">
@@ -302,8 +327,8 @@
            
             <td style="width: 30%;" data-bind="visible: Agent">
                
-             <a href="./RefusalAppeal.aspx" >
-                   <img alt="" src="../images/AppealRefusal.png" style=" height: 100px" />
+            <a href="./JournalPublication.aspx"  >
+                    <img src="../images/CARD PAYMENT2.jpg" style=" height: 100px" />
                    <%-- <img alt="" src="../images/accred.jpg" style="width: 100px; height: 100px" />--%></a>
 
                 </td>
@@ -322,7 +347,7 @@
                 <a href="./Accred_Process.aspx" >AGENT ACCREDITATION</a></td>
            
             <td style="width: 30%;" data-bind="visible: Agent">
-               <a href="./RefusalAppeal.aspx" >APPEAL REFUSAL</a>
+                <a href="./JournalPublication.aspx"   >JOURNAL  PUBLICATION PAYMENT</a>
                 </td>
             <td style="width: 30%;" data-bind="visible: Agent">
                <a href="./SearchTradeMark.aspx" >UPDATE TRADEMARK DOCUMENT</a>
@@ -331,34 +356,41 @@
 
 
      <tr class="center-align">
+          <td style="width: 30%;" data-bind="visible: Agent">
+                 <a href="./RefusalAppeal.aspx"  >
+                   <img alt="" src="../images/AppealRefusal.png"  style=" height: 100px" />
+                   <%-- <img alt="" src="../images/accred.jpg" style="width: 100px; height: 100px" />--%></a>
+                
+                </td>
           <td style="" data-bind="visible: Agent">
-                  <a href="./TrademarkAmmendment.aspx" style="visibility: hidden;" >
-                    <img src="../images/TRADEMARKS.png" style=" height: 100px" />
-                   <%-- <img alt="" src="../images/accred.jpg" style="width: 100px; height: 100px" />--%></a></td>
+                  <a href="./JournalPublication.aspx" style="visibility: hidden;"  >
+                    <img src="../images/CARD PAYMENT2.jpg"  style=" height: 100px" />
+              
+                      
+                           <%-- <img alt="" src="../images/accred.jpg" style="width: 100px; height: 100px" />--%></a></td>
            
+         
             <td style="width: 30%;" data-bind="visible: Agent">
-               
+               <a href="./TrademarkAmmendment.aspx" style="visibility: hidden;" >
+                    <img src="../images/TRADEMARKS.png"  style=" height: 100px" />
              
 
                 </td>
-            <td style="width: 30%;" data-bind="visible: Agent">
-                
-                
-                </td>
+           
         </tr> 
 
      <tr class="center-align">
-
+          <td style="width: 30%;" data-bind="visible: Agent">
+               <a href="./RefusalAppeal.aspx"  >APPEAL REFUSAL</a>
+                </td>
           
-          <td style="width: 30%;" data-bind="visible: SuperAdmin">
-                <a href="./TrademarkAmmendment.aspx" style="visibility: hidden;"  >TRADEMARK AMMENDMENT</a></td>
+          <td style="width: 30%;" data-bind="visible:Agent">
+                <a href="./JournalPublication.aspx" style="visibility: hidden;"   >JOURNAL  PUBLICATION PAYMENT</a></td>
            
-            <td style="width: 30%;" data-bind="visible: Agent">
-              
+            <td style="width: 30%;" data-bind="visible: SuperAdmin">
+               <a href="./TrademarkAmmendment.aspx" style="visibility: hidden;"  >TRADEMARK AMMENDMENT</a>
                 </td>
-            <td style="width: 30%;" data-bind="visible: Agent">
-              
-                </td>
+           
         </tr>  
 
         </table>
@@ -379,7 +411,7 @@
     </div>
 
         <div class="row">
-            <span class="glyphicon glyphicon-envelope" style="text-align:left"><a href="./profile4.aspx"  style="color:white;"  > INBOX</a></span>
+            <span class="glyphicon glyphicon-envelope" id ="kad" style="text-align:left"><a href="./profile4.aspx"  style="color:white;"  > INBOX</a></span>
             </div>
    
     </div>

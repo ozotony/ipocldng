@@ -24,6 +24,16 @@
         }
 
         </script>
+
+     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+    <style type="text/css">
+        html {
+
+            font-family: 'Lato', sans-serif;
+          
+        }
+       
+    </style>
 </head>
 <body>
 <form id="form1" runat="server">

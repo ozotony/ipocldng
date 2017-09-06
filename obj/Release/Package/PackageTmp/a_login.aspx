@@ -5,11 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>XPAY: ADMIN LOGIN</title>
+
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/a_structure.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/funk.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+    <style type="text/css">
+        html {
+
+            font-family: 'Lato', sans-serif;
+            
+        }
+       
+    </style>
 
     </head>
 <body>

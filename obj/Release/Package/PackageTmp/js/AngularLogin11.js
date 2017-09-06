@@ -1,11 +1,11 @@
 ﻿var app = angular.module('myModule', ['smart-table', 'angular-loading-bar', 'ngMessages', '720kb.datepicker', 'ngModal']);
 
-var serviceBaseIpo = 'http://88.150.164.30/EinaoTestEnvironment.IPO';
+var serviceBaseIpo = 'http://ipo.cldng.com';
 
-var serviceBaseCld = 'http://45.40.139.163/EinaoTestEnvironment.CLD/';
+var serviceBaseCld = 'http://tm.cldng.com/';
 
 
-var serviceBasePayx = 'http://localhost:21327';
+var serviceBasePayx = 'http://88.150.164.30/Payx';
 app.factory('dataFactory', ['$http', '$q', function ($http, $q) {
 
     var urlBase = '/api/customers';
@@ -357,6 +357,341 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
 }]);
 
 
+app.controller('myController3', ['$scope', '$http', '$rootScope', function ($scope, $http, $rootScope) {
+
+
+
+    var serviceBase = serviceBaseIpo + '/Handlers/GetCertificate.ashx';
+
+    var serviceBase2 = "http://tm.cldng.com/Handlers/Publication.ashx"
+    // var serviceBase = 'http://localhost:4556/Handlers/GetRegistration.ashx';
+
+
+  
+
+    $http({
+        method: 'GET',
+        url: serviceBase2,
+        transformRequest: function (obj) {
+            var str = [];
+            for (var p in obj)
+                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+            return str.join("&");
+        },
+      
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;' }
+    })
+        .success(function (response) {
+            var dd = [];
+
+            dd = response;
+
+            $scope.itemsByPage = 50;
+            $scope.ListAgent = response;
+            $scope.displayedCollection = [].concat($scope.ListAgent);
+
+            //if (dd.length > 0 && dd[0].xstat == "New") {
+
+
+            //    swal("Oops...", "Transaction Exist But Been Verified", "error");
+            //    return;
+            //}
+
+      
+            //  IpoTradeMarks2(response.Email, response.Firstname, response.CompanyAddress, response.xid, response.PhoneNumber)
+            //  ajaxindicatorstop();
+
+        })
+        .error(function (response) {
+            ajaxindicatorstop();
+        });
+
+
+
+    $scope.$on('$viewContentLoaded', function () {
+
+
+
+    });
+
+    $scope.add3 = function (dd, dd2) {
+        $scope.payment = [];
+        var Encrypt = {
+            vid: dd
+        }
+        var kk = $("#vchk").attr("checked")
+
+        if ($("#vchk").attr("checked")) {
+
+            $http({
+                method: 'POST',
+                url: serviceBaseCld + 'Handlers/GetBranchCollectPayment2.ashx',
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: Encrypt,
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;' }
+            })
+            .success(function (response) {
+                if (response.TransId == null) {
+                    swal("Record Not Found Please Complete T003 Payment")
+
+
+                }
+
+                $scope.payment = response;
+
+
+            })
+            .error(function (response) {
+
+
+                alert("error " + response)
+            });
+
+        }
+        else {
+
+            $http({
+                method: 'POST',
+                url: serviceBaseCld + 'Handlers/GetPayment.ashx',
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: Encrypt,
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;' }
+            })
+                .success(function (response) {
+
+                    try {
+
+                        response = response.split('"').join('');
+
+
+
+                        if (response == "Full Transaction  Id Search Not Allowed ") {
+
+                            swal("", "Full Transaction  Id Search Not Allowed", "error")
+                            return;
+                        }
+
+                    }
+
+                    catch (err) {
+
+
+                    }
+
+                    if (response.TransId == null) {
+                        swal("Record Not Found Please Complete T003 Payment")
+
+
+                    }
+
+                    $scope.payment = response;
+
+
+                })
+                .error(function (response) {
+
+                    swal("", "Please Enter Correct Payment ID", "error")
+                    //  alert("error " + response)
+                });
+
+        }
+
+
+    }
+
+    $rootScope.BranchCollect = false;
+    $scope.EditRow = function (dd) {
+
+        $scope.VEmail = "";
+        $rootScope.VEmail = "";
+        $("input#emailaddress").val("")
+        $scope.payment = "";
+        $rootScope.oai_no = dd.oai_no;
+        $scope.dialogShown = true;
+
+    }
+
+    $scope.EditRow2 = function (dd) {
+
+
+        var Encrypt = {
+            vid: dd.TransId,
+            vid2: $rootScope.oai_no
+        }
+
+        $http({
+            method: 'POST',
+            url: serviceBaseCld + 'Handlers/GetCld.ashx',
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj)
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                return str.join("&");
+            },
+            data: Encrypt,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;' }
+        })
+            .success(function (response) {
+                response = response.split('"').join('');
+
+
+
+                if (response == "This Payment  Id Is not For This Transaction") {
+
+                    swal("", "This Payment  Id Is not For This Transaction", "error")
+                    return;
+                }
+                if (response == "Id Already Exist") {
+
+                    swal("", "Id Already Used", "error")
+                    return;
+                }
+
+                swal(response)
+                $scope.dialogShown = false;
+                //  swal("Record Updated Successfully")
+                //  location.reload();
+
+            })
+            .error(function (error) {
+
+
+
+                //document.open();
+                //document.write(error);
+                //document.close();
+                // alert(  document.writeln(error) )
+                swal("", error, "error")
+
+
+            });
+
+    }
+
+    $scope.add2 = function (dd) {
+
+        var xname = $("input#xname").val();
+        var xaddress = $("input#xaddress").val()
+        var xemail = $("input#xemail").val()
+
+        var xPhoneNumber = $("input#xPhoneNumber").val()
+
+        var xpwalletID = $("input#xpwalletID").val()
+
+        //  var online_id = dd.oai_no
+
+        var online_id = dd.Batchno
+
+        //  IpoTradeMarks2(xemail, xname, xaddress, xpwalletID, xPhoneNumber, online_id)
+
+        IpoTradeMarks33(xemail, xname, xaddress, xpwalletID, xPhoneNumber, online_id, xname, xaddress, xemail, xPhoneNumber)
+
+    }
+
+
+    $scope.add = function () {
+
+        //  alert($scope.OnlineNumber)
+
+
+        var vk = $scope.OnlineNumber;
+
+
+        var serviceBase = serviceBaseIpo + '/Handlers/GetCertificate.ashx';
+
+        // var serviceBase = 'http://localhost:4556/Handlers/GetRegistration.ashx';
+
+
+        var Encrypt = {
+            vid: vk
+        }
+
+        $http({
+            method: 'POST',
+            url: serviceBase,
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj)
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                return str.join("&");
+            },
+            data: Encrypt,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;' }
+        })
+            .success(function (response) {
+                var dd = [];
+
+                dd = response;
+
+                //if (dd.length > 0 && dd[0].xstat == "New") {
+
+
+                //    swal("Oops...", "Transaction Exist But Been Verified", "error");
+                //    return;
+                //}
+
+                if (dd.length > 0 && dd[0].TransactionId != "") {
+
+
+                    swal("Oops...", "This Certificate  Has Been Paid For", "error");
+                    return;
+                }
+
+                if (dd.length > 0) {
+
+                    $scope.itemsByPage = 50;
+                    $scope.ListAgent = response;
+                    $scope.displayedCollection = [].concat($scope.ListAgent);
+
+                }
+
+                else {
+
+                    swal("Oops...", "Invalid Online Number!", "error");
+
+                    $scope.displayedCollection = [];
+                    $scope.ListAgent = [];
+                }
+                //  IpoTradeMarks2(response.Email, response.Firstname, response.CompanyAddress, response.xid, response.PhoneNumber)
+                //  ajaxindicatorstop();
+
+            })
+            .error(function (response) {
+                ajaxindicatorstop();
+            });
+
+
+
+        //var SponsData = {
+
+
+        //    email: $scope.Email,
+        //    xpass: $scope.Password,
+        //    request: 'vlogin'
+
+
+        //};
+
+    }
+
+
+    //When you have entire dataset
+
+
+
+}]);
+
+
 
 
 
@@ -388,7 +723,7 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
 
 function IpoTradeMarks2(email, name, address, vid, PhoneNumber, vonlineid, name2, address2, email2, PhoneNumber2) {
 
-    postwith('http://88.150.164.30/EinaoTestEnvironment.Payx/A/m_payx.aspx', {
+    postwith(serviceBasePayx + '/A/m_payx.aspx', {
 
         //postwith('http://localhost:21327/A/m_payx.aspx', {
 
@@ -397,6 +732,30 @@ function IpoTradeMarks2(email, name, address, vid, PhoneNumber, vonlineid, name2
         address: address,
         email: email,
         PhoneNumber2: PhoneNumber,
+        pwalletID: vid,
+        onlineid: vonlineid,
+        xname2: name2,
+        address2: address2,
+        email2: email2,
+        PhoneNumber77: PhoneNumber2
+    });
+
+
+
+}
+
+
+function IpoTradeMarks33(email, name, address, vid, PhoneNumber, vonlineid, name2, address2, email2, PhoneNumber2) {
+   
+    postwith(serviceBasePayx + '/A/m_payx.aspx', {
+
+        //postwith('http://localhost:21327/A/m_payx.aspx', {
+
+        xname: name,
+        agentType: 'Agent',
+        address: address,
+        email: email,
+        PhoneNumber13: PhoneNumber,
         pwalletID: vid,
         onlineid: vonlineid,
         xname2: name2,

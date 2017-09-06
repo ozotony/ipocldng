@@ -275,6 +275,15 @@ namespace Ipong.Classes
                     this.data_status = "Being processed";
                 }
             }
+
+            if (status == "33")
+            {
+                this.status = "Examiners"; this.data_status = "Being processed";
+                if (data_status == "Search 2 Conducted")
+                {
+                    this.data_status = "Being processed";
+                }
+            }
             if (status == "4")
             {
                 this.status = "Acceptance"; this.data_status = "Being processed";

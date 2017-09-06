@@ -113,6 +113,7 @@
     <Content Include="A\form2.html" />
     <Content Include="A\form3.html" />
     <Content Include="A\form4.html" />
+    <Content Include="A\JournalPublication.aspx" />
     <Content Include="A\Manual_Trademark.aspx" />
     <Content Include="A\Online_Trademark.aspx" />
     <Content Include="ajax-loader.jpg" />
@@ -412,6 +413,7 @@
     <Content Include="Script\jquery-1.4.1.js" />
     <Content Include="Script\jquery-1.4.1.min.js" />
     <Content Include="Script\jquery-2.1.1.min.js" />
+    <Content Include="Test.aspx" />
     <Content Include="Test.html" />
     <Content Include="xis\pd\tx\test_form.aspx" />
     <Content Include="xis\pd\tx\re_payment_details.aspx" />
@@ -825,6 +827,13 @@
     </Compile>
     <Compile Include="A\Assignment_Trademark3.aspx.designer.cs">
       <DependentUpon>Assignment_Trademark3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A\JournalPublication.aspx.cs">
+      <DependentUpon>JournalPublication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A\JournalPublication.aspx.designer.cs">
+      <DependentUpon>JournalPublication.aspx</DependentUpon>
     </Compile>
     <Compile Include="A\Manual_Trademark.aspx.cs">
       <DependentUpon>Manual_Trademark.aspx</DependentUpon>
@@ -1339,6 +1348,13 @@
     </Compile>
     <Compile Include="P\pay_his.aspx.designer.cs">
       <DependentUpon>pay_his.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="xis\pd\tx\test_form.aspx.cs">
       <DependentUpon>test_form.aspx</DependentUpon>

@@ -46,7 +46,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2015 14:38:41</publishTime>
     </File>
     <File Include="A/confirm_basket_details.aspx">
-      <publishTime>04/06/2015 21:52:50</publishTime>
+      <publishTime>07/26/2017 11:29:38</publishTime>
     </File>
     <File Include="A/confirm_basket_details2.aspx">
       <publishTime>01/02/2015 11:03:54</publishTime>
@@ -69,6 +69,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="A/form4.html">
       <publishTime>09/29/2015 14:36:55</publishTime>
     </File>
+    <File Include="A/JournalPublication.aspx">
+      <publishTime>08/07/2017 11:03:08</publishTime>
+    </File>
     <File Include="A/Manual_Trademark.aspx">
       <publishTime>04/20/2015 16:18:39</publishTime>
     </File>
@@ -76,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/21/2016 14:41:32</publishTime>
     </File>
     <File Include="A/profile.aspx">
-      <publishTime>05/16/2017 11:40:46</publishTime>
+      <publishTime>08/03/2017 10:55:00</publishTime>
     </File>
     <File Include="A/profile3.aspx">
-      <publishTime>01/26/2017 14:48:33</publishTime>
+      <publishTime>07/26/2017 11:25:57</publishTime>
     </File>
     <File Include="A/profile4.aspx">
       <publishTime>08/15/2015 23:27:48</publishTime>
@@ -145,43 +148,43 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2015 11:03:54</publishTime>
     </File>
     <File Include="A/v_bask.aspx">
-      <publishTime>03/04/2015 11:02:17</publishTime>
+      <publishTime>07/26/2017 11:19:27</publishTime>
     </File>
     <File Include="A/v_bask2.aspx">
       <publishTime>08/18/2014 11:35:41</publishTime>
     </File>
     <File Include="A/v_bask_ds.aspx">
-      <publishTime>03/04/2015 11:02:59</publishTime>
+      <publishTime>07/26/2017 11:21:25</publishTime>
     </File>
     <File Include="A/v_bask_ds2.aspx">
       <publishTime>08/18/2014 11:36:21</publishTime>
     </File>
     <File Include="A/v_bask_dsu.aspx">
-      <publishTime>01/02/2015 11:03:54</publishTime>
+      <publishTime>07/26/2017 11:21:38</publishTime>
     </File>
     <File Include="A/v_bask_pt.aspx">
-      <publishTime>03/04/2015 11:02:59</publishTime>
+      <publishTime>07/26/2017 11:21:53</publishTime>
     </File>
     <File Include="A/v_bask_pt2.aspx">
       <publishTime>08/18/2014 11:36:53</publishTime>
     </File>
     <File Include="A/v_bask_ptu.aspx">
-      <publishTime>01/02/2015 11:03:54</publishTime>
+      <publishTime>07/26/2017 11:22:14</publishTime>
     </File>
     <File Include="A/v_bask_tm.aspx">
-      <publishTime>01/12/2016 23:15:19</publishTime>
+      <publishTime>07/26/2017 11:18:44</publishTime>
     </File>
     <File Include="A/v_bask_tm2.aspx">
       <publishTime>08/18/2014 11:37:26</publishTime>
     </File>
     <File Include="A/v_bask_tmu.aspx">
-      <publishTime>01/02/2015 11:03:54</publishTime>
+      <publishTime>07/26/2017 11:22:51</publishTime>
     </File>
     <File Include="A/v_bask_tm_old.aspx">
       <publishTime>08/01/2014 10:14:35</publishTime>
     </File>
     <File Include="A/v_bask_tm_pro.aspx">
-      <publishTime>01/02/2015 11:03:54</publishTime>
+      <publishTime>07/26/2017 11:22:36</publishTime>
     </File>
     <File Include="A/xindex_manual.aspx">
       <publishTime>06/27/2015 10:14:03</publishTime>
@@ -286,7 +289,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2015 11:03:54</publishTime>
     </File>
     <File Include="a_login.aspx">
-      <publishTime>12/15/2015 09:46:04</publishTime>
+      <publishTime>07/26/2017 11:23:34</publishTime>
     </File>
     <File Include="B/m_status.aspx">
       <publishTime>02/25/2015 22:40:11</publishTime>
@@ -319,7 +322,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2013 12:52:42</publishTime>
     </File>
     <File Include="bin/Ipong.dll">
-      <publishTime>05/17/2017 14:25:20</publishTime>
+      <publishTime>08/06/2017 08:02:26</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>01/02/2015 11:03:56</publishTime>
@@ -1258,10 +1261,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/26/2015 11:46:14</publishTime>
     </File>
     <File Include="js/AngularLogin11.js">
-      <publishTime>06/23/2016 17:34:04</publishTime>
+      <publishTime>07/28/2017 16:48:17</publishTime>
     </File>
     <File Include="js/AngularLogin11a.js">
-      <publishTime>05/18/2017 10:28:55</publishTime>
+      <publishTime>07/05/2017 23:18:42</publishTime>
     </File>
     <File Include="js/AngularLogin3.js">
       <publishTime>12/01/2016 11:06:30</publishTime>
@@ -1884,6 +1887,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="svs/agt_mgr.asmx">
       <publishTime>01/02/2015 11:03:58</publishTime>
     </File>
+    <File Include="Test.aspx">
+      <publishTime>07/10/2017 14:31:46</publishTime>
+    </File>
     <File Include="Test.html">
       <publishTime>03/29/2017 13:12:03</publishTime>
     </File>
@@ -2275,7 +2281,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2015 11:03:54</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/03/2017 13:12:03</publishTime>
+      <publishTime>08/06/2017 08:02:40</publishTime>
     </File>
     <File Include="X/profile.aspx">
       <publishTime>01/02/2015 11:03:59</publishTime>
