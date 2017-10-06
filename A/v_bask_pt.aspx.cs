@@ -42,6 +42,7 @@ namespace Ipong.A
         protected string agentemail = "";
         protected string agentpnumber = "";
         protected string agentname = "";
+        public string pwalletid = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -52,7 +53,8 @@ namespace Ipong.A
                 adminID = Session["pwalletID"].ToString();
                 Session["pwalletID2"] = adminID;
                 xadminID.Value = adminID;
-
+              //  xadminID.Value = "166";
+                pwalletid = adminID;
                 if (!IsPostBack)
                 {
 

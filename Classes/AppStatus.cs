@@ -316,6 +316,14 @@ namespace Ipong.Classes
 
                 }
 
+                else if (data_status == "Withdraw")
+                {
+                    this.data_status = data_status;
+
+                    this.status = "has been Withdrawn";
+
+                }
+
                 else
                 {
 

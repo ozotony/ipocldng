@@ -188,7 +188,7 @@ namespace Ipong.A
 
 
                         //  if (Convert.ToInt32(lt_pw[0].status) >= 5 && lt_pw[0].data_status == "Accepted")
-                        if (lt_pw[0].data_status != "Fresh" && lt_pw[0].data_status != "Valid" && lt_pw[0].data_status != "Re-conduct search" && lt_pw[0].data_status != "Search Conducted" && lt_pw[0].data_status != "Search 2 Conducted" && lt_pw[0].data_status != "Re-examine" && lt_pw[0].data_status != "Registrable" && lt_pw[0].data_status != "Refused" && lt_pw[0].data_status != "Non-registrable" && lt_pw[0].data_status.ToUpper() != "KIV")
+                        if (lt_pw[0].data_status != "Fresh" && lt_pw[0].data_status != "Valid" && lt_pw[0].data_status != "Withdraw" && lt_pw[0].data_status != "Re-conduct search" && lt_pw[0].data_status != "Search Conducted" && lt_pw[0].data_status != "Search 2 Conducted" &&  lt_pw[0].data_status != "Invalid" && lt_pw[0].data_status != "Re-examine" && lt_pw[0].data_status != "Registrable" && lt_pw[0].data_status != "Refused" && lt_pw[0].data_status != "Non-registrable" && lt_pw[0].data_status.ToUpper() != "KIV")
                         {
                             Session["d_status"] = lt_pw[0].status;
                             string ssd = System.Configuration.ConfigurationManager.AppSettings["cld_root"];
@@ -330,7 +330,8 @@ namespace Ipong.A
 
 
                         //  if (Convert.ToInt32(lt_pw[0].status) >= 5 && lt_pw[0].data_status == "Accepted")
-                        if (lt_pw[0].data_status != "Fresh" && lt_pw[0].data_status != "Valid" && lt_pw[0].data_status != "Re-conduct search" && lt_pw[0].data_status != "Search Conducted" && lt_pw[0].data_status != "Search 2 Conducted" && lt_pw[0].data_status != "Re-examine" && lt_pw[0].data_status != "Registrable" && lt_pw[0].data_status != "Refused" && lt_pw[0].data_status != "Non-registrable" && lt_pw[0].data_status != "Kiv")
+                        if (lt_pw[0].data_status != "Fresh" && lt_pw[0].data_status != "Valid" && lt_pw[0].data_status != "Withdraw" && lt_pw[0].data_status != "Re-conduct search" && lt_pw[0].data_status != "Search Conducted" && lt_pw[0].data_status != "Search 2 Conducted" && lt_pw[0].data_status != "Re-examine" && lt_pw[0].data_status != "Invalid" && lt_pw[0].data_status != "Registrable" && lt_pw[0].data_status != "Refused" && lt_pw[0].data_status != "Non-registrable" && lt_pw[0].data_status.ToUpper() != "KIV")
+                        
                         {
                             Session["d_status"] = lt_pw[0].status;
                             string ssd = System.Configuration.ConfigurationManager.AppSettings["cld_root"];
@@ -457,7 +458,7 @@ namespace Ipong.A
 
 
                         //  if (Convert.ToInt32(lt_pw[0].status) >= 5 && lt_pw[0].data_status == "Accepted")
-                        if (lt_pw[0].data_status != "Fresh" && lt_pw[0].data_status != "Valid" && lt_pw[0].data_status != "Re-conduct search" && lt_pw[0].data_status != "Search Conducted" && lt_pw[0].data_status != "Search 2 Conducted" && lt_pw[0].data_status != "Re-examine" && lt_pw[0].data_status != "Registrable" && lt_pw[0].data_status != "Refused" && lt_pw[0].data_status != "Non-registrable" && lt_pw[0].data_status != "Kiv")
+                        if (lt_pw[0].data_status != "Fresh" && lt_pw[0].data_status != "Valid" && lt_pw[0].data_status != "Withdraw" && lt_pw[0].data_status != "Re-conduct search" && lt_pw[0].data_status != "Search Conducted" && lt_pw[0].data_status != "Search 2 Conducted" && lt_pw[0].data_status != "Re-examine" && lt_pw[0].data_status != "Invalid" && lt_pw[0].data_status != "Registrable" && lt_pw[0].data_status != "Refused" && lt_pw[0].data_status != "Non-registrable" && lt_pw[0].data_status.ToUpper() != "KIV")
                         {
                             Session["d_status"] = lt_pw[0].status;
                             string ssd = System.Configuration.ConfigurationManager.AppSettings["cld_root"];
