@@ -1873,7 +1873,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/07/2016 23:03:30</publishTime>
     </File>
     <File Include="Script/App8.js">
-      <publishTime>06/16/2016 15:38:12</publishTime>
+      <publishTime>11/05/2017 20:43:23</publishTime>
     </File>
     <File Include="Script/jquery-1.4.1.js">
       <publishTime>07/09/2015 12:33:16</publishTime>
@@ -1888,7 +1888,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2015 11:03:58</publishTime>
     </File>
     <File Include="Test.aspx">
-      <publishTime>07/10/2017 14:31:46</publishTime>
+      <publishTime>11/03/2017 15:10:09</publishTime>
     </File>
     <File Include="Test.html">
       <publishTime>03/29/2017 13:12:03</publishTime>

@@ -46,16 +46,25 @@
     padding: 1em;
   }
 </style>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
 </head>
 <body>
- <nav class="col-1">Nav</nav>
-  <div class="col-2">
-  	<header>Header</header>
-    <main class="content">
-    <article>Article</article>
-    <aside>Aside</aside>
-    </main>
-  	<footer>Footer</footer>
-  </div>
+     <div id="app"></div>
+        <script type="text/babel">
+class App extends React.Component {
+render() {
+return <h1>Hello from our app</h1>
+}
+}
+var mount = document.querySelector('#app');
+ReactDOM.render(<App />, mount);
+</script>
+     
+ 
 </body>
 </html>

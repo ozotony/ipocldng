@@ -1,10 +1,10 @@
 ﻿var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'angular-loading-bar', 'ngModal', 'smart-table']);
 
-//var serviceBaseIpo = 'http://ipo.cldng.com/';
-var serviceBaseIpo = 'http://localhost:4556/';
+var serviceBaseIpo = 'http://ipo.cldng.com/';
+//var serviceBaseIpo = 'http://localhost:4556/';
 
-//var serviceBaseCld = 'http://tm.cldng.com/'
-var serviceBaseCld = 'http://localhost:49703/'
+var serviceBaseCld = 'http://tm.cldng.com/'
+//var serviceBaseCld = 'http://localhost:49703/'
 
 //var migrateGe = 'http://88.150.164.30/MigrateGETest/'
 
@@ -340,9 +340,9 @@ app.controller('formController', function ($scope, $state, $rootScope, $http, $s
             //   var kk2 = JSON.parse(kk);
 
         }).error(function (err, status) {
-
+            console.log(err)
             var dd = err;
-            //  swal("Cancelled", err.Message, "error");
+              swal("", err.Message, "error");
 
         });
 
