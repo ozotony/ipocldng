@@ -137,7 +137,15 @@
        <a href="#" ><span>MAKE PAYMENT</span></a>
 
    </li>
+
+
    <li data-bind="visible: Agent" ><a href='./v_bask.aspx'><span>VIEW BASKET</span></a></li>
+
+    <li data-bind="visible: Agent" >
+     <%--   <a href="#" onclick="postwith('<%=System.Configuration.ConfigurationManager.AppSettings["payx_home"] %>', { agentType: '<%=agentType %>', pwalletID: '<%=adminID %>' });"><span>MAKE PAYMENT</span></a>--%>
+       <a href=""  ng-click="submit4(row)" ><span >REQUERY <br /><br /> PAYMENT </span></a>
+
+   </li>
 
    <li data-bind="visible: Agent"><a href='#'><span>REPORTS</span></a>
     <ul> 
@@ -160,7 +168,7 @@
 
    <li data-bind="visible: Agent"><a href='./xmail.aspx'><span>CONTACT IPO</span></a></li> <li data-bind="visible: Agent"><a href='./feelist.aspx'><span>FEE LIST ITEMS</span></a></li>
 
-    <li data-bind="visible: Agent"> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">BRANCH COLLECT <span> <br /><br /> PAYMENT</span> </asp:LinkButton> </li>
+    <li data-bind="visible: Agent"> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">BRANCH <br /><br /> COLLECT <span> <br /> PAYMENT</span> </asp:LinkButton> </li>
 </ul>
 
       

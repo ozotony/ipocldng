@@ -42,7 +42,6 @@ C:\Einao\VS Source\Projects\IpongBackup\bin\Ipong.pdb
 C:\Einao\VS Source\Projects\IpongBackup\bin\Brettle.Web.NeatUpload.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\Brettle.Web.NeatUpload.GreyBoxProgressBar.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\Brettle.Web.NeatUpload.HashedInputFile.dll
-C:\Einao\VS Source\Projects\IpongBackup\bin\EPPlus.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\Hitone.Web.SqlServerUploader.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\log4net.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\EPPlus.xml

@@ -64,6 +64,16 @@ app.controller('formController', function ($scope,  $rootScope, $http) {
 
     });
 
+
+    $scope.submit4 = function () {
+       
+
+
+
+        //  $state.transitionTo('ContentUrl', null, { 'reload': false });
+        OpenWindowWithPost2("http://payx.com.ng/Requery_Tool.aspx", "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile");
+    }
+
     // alert($location.search().name)
 
  
@@ -80,7 +90,10 @@ app.controller('formController', function ($scope,  $rootScope, $http) {
 
 });
 
+function OpenWindowWithPost2(url, windowoption, name) {
 
+    window.open(url, name, windowoption);
+}
 
 function blinktext() {
     var count = 0;

@@ -57,13 +57,44 @@
      <div id="app"></div>
         <script type="text/babel">
 class App extends React.Component {
+
+
 render() {
-return <h1>Hello from our app</h1>
+
+var rows = this.props.data.map(function(row){
+return <tr>
+<td>{row.when}</td>
+<td>{row.who}</td>
+<td>{row.description}</td>
+</tr>
+            });
+return <div>
+<table>
+<thead>
+<th>When</th>
+<th>Who</th>
+<th>Description</th>
+</thead>
+{rows}
+</table>
+
+    </div>
 }
 }
 var mount = document.querySelector('#app');
-ReactDOM.render(<App />, mount);
+var data = [{ "when": "2 minutes ago",
+"who": "Jill Dupre",
+"description": "Created new account"
+},
+{
+"when": "1 hour ago",
+"who": "Lose White",
+"description": "Added fist chapter"
+}];
+ReactDOM.render(<App  data = {data} />, mount);
 </script>
+
+
      
  
 </body>
