@@ -276,13 +276,13 @@
                      INNER JOIN twallet ON  twallet.xid=fee_details.twalletID 
                      INNER JOIN applicant ON  twallet.applicantID=applicant.xid 
                      INNER JOIN hwallet ON hwallet.fee_detailsID=fee_details.xid 
-                     where fee_list.xcategory='tm' AND twallet.xmemberID=@getAdminID AND twallet.xpay_status='1' AND hwallet.used_status='Not used' 
+                     where fee_list.xcategory='tm' AND twallet.xmemberID=@getAdminID2 AND twallet.xpay_status='1' AND hwallet.used_status='Not used' 
                        
                      ">
                   
                      
                        <SelectParameters>
-                       <asp:ControlParameter ControlID="xadminID" Name="getAdminID" PropertyName="Value" Type="String" />
+                       <asp:ControlParameter ControlID="xadminID" Name="getAdminID2" PropertyName="Value" Type="String" />
                    </SelectParameters>
                 </asp:SqlDataSource>                  
                                  
