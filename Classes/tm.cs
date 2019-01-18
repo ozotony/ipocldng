@@ -1271,6 +1271,10 @@ namespace Ipong.Classes
         {
             return ConfigurationManager.ConnectionStrings["tmConnectionString"].ConnectionString;
         }
+        public string ConnectXpay()
+        {
+            return ConfigurationManager.ConnectionStrings["xpayConnectionString"].ConnectionString;
+        }
         public string ConnectDs()
         {
             return ConfigurationManager.ConnectionStrings["dsConnectionString"].ConnectionString;
@@ -2869,6 +2873,44 @@ namespace Ipong.Classes
             }
             reader.Close();
             return ID;
+        }
+
+        public List<ViewBasket> ViewBasket2(string cat, string agt)
+        {
+            List<ViewBasket> xlist = new List<ViewBasket>();
+            SqlConnection connection = new SqlConnection(this.ConnectXpay());
+            //  SqlCommand command = new SqlCommand("SELECT * FROM fee_list WHERE xcategory='" + cat + "' ", connection);
+            SqlCommand command = new SqlCommand("select applicant.xname,applicant.address,applicant.xemail,applicant.xmobile,hwallet.*,hwallet.transID+'-'+CAST(hwallet.fee_detailsID AS NVARCHAR)+'-'+CAST(hwallet.xid AS NVARCHAR) AS new_transID,fee_list.item_code,fee_list.xdesc, CONVERT(varchar, CAST(fee_details.init_amt AS money), 1) as init_amt from fee_list  INNER JOIN fee_details ON fee_details.fee_listID = fee_list.xid   INNER JOIN twallet ON  twallet.xid = fee_details.twalletID   INNER JOIN applicant ON  twallet.applicantID = applicant.xid      INNER JOIN hwallet ON hwallet.fee_detailsID = fee_details.xid  where fee_list.xcategory = '" + cat + "'  AND twallet.xmemberID ='" + agt + "'  AND twallet.xpay_status = '1' AND hwallet.used_status = 'Not used' ", connection);
+
+
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            int vsn = 0;
+            while (reader.Read())
+            {
+                vsn = vsn + 1;
+                ViewBasket x = new ViewBasket();
+                x.sn = vsn;
+                x.fee_detailsID = reader["fee_detailsID"].ToString();
+                x.init_amt = Convert.ToDouble(reader["init_amt"]);
+                x.item_code = reader["item_code"].ToString();
+                x.new_transID = reader["new_transID"].ToString();
+                x.product_title = reader["product_title"].ToString();
+                x.transID = reader["transID"].ToString();
+                x.used_date = reader["used_date"].ToString();
+                x.used_status = reader["used_status"].ToString();
+                x.xdesc = reader["xdesc"].ToString();
+                x.xid = reader["xid"].ToString();
+                x.xname = reader["xname"].ToString();
+                x.xreg_date = reader["xreg_date"].ToString();
+                x.address = reader["address"].ToString();
+                x.xemail = reader["xemail"].ToString();
+                x.xmobile = reader["xmobile"].ToString();
+
+                xlist.Add(x);
+            }
+            reader.Close();
+            return xlist;
         }
         public List<Stage> getBasketStageByUserIDAcc(string validationID, string agentID)
         {

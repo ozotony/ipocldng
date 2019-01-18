@@ -63,6 +63,9 @@ namespace Ipong.A
                     {
                         agentType = Session["agentType"].ToString();
                         unused_cnt = ret.getPaidUsedCntByCat(adminID, "tm", "1", agentType, "Not Used"); Session["unused_cnt"] =unused_cnt;
+                        // gvTm.da
+                        gvTm.DataSource = t.ViewBasket2("tm", adminID);
+                        gvTm.DataBind();
                         if (agentType == "Agent")
                         {
                             c_reg = ret.getRegistrationByID(adminID);
@@ -99,6 +102,14 @@ namespace Ipong.A
             { Response.Redirect("../a_login.aspx"); }
             if ((Session["log_date"] != null) && (Session["log_date"].ToString() != ""))
             { log_date = Session["log_date"].ToString(); }
+        }
+
+        protected void gridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvTm.PageIndex = e.NewPageIndex;
+            gvTm.DataSource = t.ViewBasket2("tm", adminID);
+            gvTm.DataBind();
+           // gvTm.DataBind();
         }
 
         protected void gvTm_RowCommand(object sender, GridViewCommandEventArgs e)

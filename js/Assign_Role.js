@@ -50,7 +50,7 @@
 
         
         self.Delrec = function (employee) {
-            var url7 = 'http://88.150.164.30/CLDMVC/Home/DeleteAgent';
+            var url7 = 'http://5.77.54.44/CLDMVC/Home/DeleteAgent';
             // DeleteAgent(String kk2,String vRole)
 
             $.ajax({
@@ -80,7 +80,7 @@
 
             self.Email(employee.Email);
 
-            var url4 = 'http://88.150.164.30/CLDMVC/Home/GetAgent2';
+            var url4 = 'http://5.77.54.44/CLDMVC/Home/GetAgent2';
             $.ajax({
                 type: "GET",
                 data: { kk2: employee.Agent_Code },
@@ -113,7 +113,7 @@
 
         self.save = function () {
 
-            var url3 = 'http://88.150.164.30/CLDMVC/Home/SubmitAgent';
+            var url3 = 'http://5.77.54.44/CLDMVC/Home/SubmitAgent';
 
             var formData = new FormData();
 
@@ -164,9 +164,9 @@
            
         }
 
-        var url = 'http://88.150.164.30/CLDMVC/Home/GetRole';
+        var url = 'http://5.77.54.44/CLDMVC/Home/GetRole';
 
-        var url2 = 'http://88.150.164.30/CLDMVC/Home/GetAgent';
+        var url2 = 'http://5.77.54.44/CLDMVC/Home/GetAgent';
 
        
 

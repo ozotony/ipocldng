@@ -11,7 +11,7 @@
         self.Payment = ko.observable("");
       
      
-       var url4 = 'http://88.150.164.30/CLDMVC/Home/AgentAccess';
+       var url4 = 'http://5.77.54.44/CLDMVC/Home/AgentAccess';
 
        // var url4 = 'http://localhost:21936/Home/AgentAccess';
 

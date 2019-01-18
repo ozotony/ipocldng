@@ -193,7 +193,7 @@ namespace Ipong.A
                             Session["d_status"] = lt_pw[0].status;
                             string ssd = System.Configuration.ConfigurationManager.AppSettings["cld_root"];
 
-                            //  acceptance_letter = "http://tm.cldng.com/admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
+                            //  acceptance_letter = "http://5.77.54.44:8081/admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
 
                             acceptance_letter = ssd + "admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
 
@@ -336,7 +336,7 @@ namespace Ipong.A
                             Session["d_status"] = lt_pw[0].status;
                             string ssd = System.Configuration.ConfigurationManager.AppSettings["cld_root"];
 
-                            //  acceptance_letter = "http://tm.cldng.com/admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
+                            //  acceptance_letter = "http://5.77.54.44:8081/admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
 
                             acceptance_letter = ssd + "admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
 
@@ -463,7 +463,7 @@ namespace Ipong.A
                             Session["d_status"] = lt_pw[0].status;
                             string ssd = System.Configuration.ConfigurationManager.AppSettings["cld_root"];
 
-                            //  acceptance_letter = "http://tm.cldng.com/admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
+                            //  acceptance_letter = "http://5.77.54.44:8081/admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
 
                             acceptance_letter = ssd + "admin/tm/acceptance_slip_details.aspx?x=" + lt_mi[0].xID + " &x2=tt"; ;
 
@@ -579,10 +579,10 @@ namespace Ipong.A
 
                 if ((c_mark.xID != null) && (c_mark.logo_pic != ""))
                 {
-                    tm_img.ImageUrl = "http://88.150.164.30/CLD/admin/tm/" + c_mark.logo_pic;
+                    tm_img.ImageUrl = "http://5.77.54.44:8081/admin/tm/" + c_mark.logo_pic;
 
                     Stream str = null;
-                    string imageUrl = "http://88.150.164.30/CLD/admin/tm/" + c_mark.logo_pic;
+                    string imageUrl = "http://5.77.54.44:8081/admin/tm/" + c_mark.logo_pic;
                     HttpWebRequest wReq = (HttpWebRequest)WebRequest.Create(imageUrl);
                     HttpWebResponse wRes = (HttpWebResponse)(wReq).GetResponse();
                     str = wRes.GetResponseStream();
@@ -608,20 +608,20 @@ namespace Ipong.A
                         }
                         else
                         {
-                            tm_img.ImageUrl = "http://88.150.164.30/IpoCldng/images/na.png";
+                            tm_img.ImageUrl = "http://5.77.54.44/IpoCldng/images/na.png";
                             tm_img.Height = new Unit(240, UnitType.Pixel); tm_img.Width = new Unit(240, UnitType.Pixel);
                         }
 
                     }
                     catch (Exception ex)
                     {
-                        tm_img.ImageUrl = "http://88.150.164.30/IpoCldng/images/na.png";
+                        tm_img.ImageUrl = "http://5.77.54.44/IpoCldng/images/na.png";
                         tm_img.Height = new Unit(240, UnitType.Pixel); tm_img.Width = new Unit(240, UnitType.Pixel);
                     }
                 }
                 else
                 {
-                    // tm_img.ImageUrl = "http://88.150.164.30/IpoCldng/images/na.png";
+                    // tm_img.ImageUrl = "http://5.77.54.44/IpoCldng/images/na.png";
                     //  tm_img.Height = new Unit(240, UnitType.Pixel); tm_img.Width = new Unit(240, UnitType.Pixel);
                 }
                 showtm = 2;

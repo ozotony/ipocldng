@@ -8,6 +8,7 @@ using System.Net.Mail;
 using System.Web;
 using System.Web.Script.Serialization;
 
+
 namespace Ipong.Handlers
 {
     /// <summary>
@@ -138,7 +139,10 @@ namespace Ipong.Handlers
 
                     xagent = ret.getRegistrationByLogin(dd.email, new_hash);
 
-                     sendemail(dd.email, xagent.Surname);
+                       
+                      
+
+                        sendemail(dd.email, xagent.Surname);
                     json2 = js.Serialize(vnum);
                     //  json = "{\"msg\":" + json + "}";
                     context.Response.ContentType = "application/json";

@@ -30,6 +30,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +99,7 @@
   <ItemGroup>
     <Content Include="Agent_Accreditation\Accreditation_Status.aspx" />
     <Content Include="Agent_Accreditation\Assign_Role.aspx" />
+    <Content Include="A\AlterationPatent_Recordal.aspx" />
     <Content Include="A\Assignment_Trademark.aspx" />
     <Content Include="A\Assignment_Trademark2.aspx" />
     <Content Include="A\Assignment_Trademark3.aspx" />
@@ -345,6 +347,7 @@
     <Content Include="js\AngularLogin10.js" />
     <Content Include="js\AngularLogin11.js" />
     <Content Include="js\AngularLogin11a.js" />
+    <Content Include="js\AngularLogin12.js" />
     <Content Include="js\AngularLogin3.js" />
     <Content Include="js\AngularLogin4.js" />
     <Content Include="js\AngularLogin5.js" />
@@ -403,6 +406,10 @@
     <Content Include="Handlers\GetEmailCount.ashx" />
     <Content Include="Handlers\SaveAgent2.ashx" />
     <Content Include="Handlers\GetRefusedApplication.ashx" />
+    <Content Include="Handlers\SaveAgent3.ashx" />
+    <Content Include="Handlers\SaveAgent4.ashx" />
+    <Content Include="Handlers\GetCertificate8.ashx" />
+    <Content Include="Handlers\GetCertificate9.ashx" />
     <None Include="Script\jquery-1.4.1-vsdoc.js" />
     <Content Include="Script\App2.js" />
     <Content Include="Script\App3.js" />
@@ -807,6 +814,13 @@
     <Compile Include="Agent_Accreditation\Assign_Role.aspx.designer.cs">
       <DependentUpon>Assign_Role.aspx</DependentUpon>
     </Compile>
+    <Compile Include="A\AlterationPatent_Recordal.aspx.cs">
+      <DependentUpon>AlterationPatent_Recordal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A\AlterationPatent_Recordal.aspx.designer.cs">
+      <DependentUpon>AlterationPatent_Recordal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="A\Assignment_Trademark.aspx.cs">
       <DependentUpon>Assignment_Trademark.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1137,6 +1151,7 @@
     <Compile Include="A\v_bask_pt.aspx.designer.cs">
       <DependentUpon>v_bask_pt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Applicant.cs" />
     <Compile Include="Classes\AppStatus.cs" />
     <Compile Include="Classes\BranchCollect.cs" />
     <Compile Include="Classes\Branch_Collect.cs" />
@@ -1152,10 +1167,14 @@
     <Compile Include="..\pt.cs">
       <Link>Classes\pt.cs</Link>
     </Compile>
+    <Compile Include="Classes\PtInfo.cs" />
     <Compile Include="Classes\RemotePost.cs" />
+    <Compile Include="Classes\Reports.cs" />
+    <Compile Include="Classes\Stage.cs" />
     <Compile Include="Classes\tm.cs" />
     <Compile Include="Classes\UserSession.cs" />
     <Compile Include="Classes\Validator.cs" />
+    <Compile Include="Classes\ViewBasket.cs" />
     <Compile Include="Classes\zues.cs" />
     <Compile Include="a_login.aspx.cs">
       <DependentUpon>a_login.aspx</DependentUpon>
@@ -1262,6 +1281,12 @@
     <Compile Include="Handlers\GetCertificate7.ashx.cs">
       <DependentUpon>GetCertificate7.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\GetCertificate8.ashx.cs">
+      <DependentUpon>GetCertificate8.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\GetCertificate9.ashx.cs">
+      <DependentUpon>GetCertificate9.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\GetCldClass.ashx.cs">
       <DependentUpon>GetCldClass.ashx</DependentUpon>
     </Compile>
@@ -1314,6 +1339,12 @@
     </Compile>
     <Compile Include="Handlers\SaveAgent2.ashx.cs">
       <DependentUpon>SaveAgent2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SaveAgent3.ashx.cs">
+      <DependentUpon>SaveAgent3.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\SaveAgent4.ashx.cs">
+      <DependentUpon>SaveAgent4.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Save_GenericApplication.ashx.cs">
       <DependentUpon>Save_GenericApplication.ashx</DependentUpon>

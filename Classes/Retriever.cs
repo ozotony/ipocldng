@@ -79,6 +79,167 @@ namespace Ipong.Classes
             return y;
         }
 
+        public List<Applicant> getApplicantByvalidationID(string validationID)
+        {
+            List<Applicant> list = new List<Applicant>();
+            new Applicant();
+            SqlConnection connection = new SqlConnection(ConnectPt());
+            SqlCommand command = new SqlCommand("SELECT * FROM applicant WHERE log_staff='" + validationID + "' ", connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read())
+            {
+                Applicant item = new Applicant
+                {
+                    ID = reader["ID"].ToString(),
+                    xname = ConvertTab2Apos(reader["xname"].ToString()),
+                    address = ConvertTab2Apos(reader["address"].ToString()),
+                    xemail = ConvertTab2Apos(reader["xemail"].ToString()),
+                    xmobile = reader["xmobile"].ToString(),
+                    nationality = reader["nationality"].ToString(),
+                    log_staff = reader["log_staff"].ToString(),
+                    visible = reader["visible"].ToString()
+                };
+                list.Add(item);
+            }
+            reader.Close();
+            return list;
+        }
+
+        public List<PtInfo> getPtInfoByPwalletID(string ID)
+        {
+            List<PtInfo> list = new List<PtInfo>();
+            new PtInfo();
+            SqlConnection connection = new SqlConnection(ConnectPt());
+            SqlCommand command = new SqlCommand("SELECT * FROM pt_info WHERE log_staff='" + ID + "' ", connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read())
+            {
+                PtInfo item = new PtInfo
+                {
+                    xID = reader["xID"].ToString(),
+                    reg_number = reader["reg_number"].ToString(),
+                    xtype = reader["xtype"].ToString(),
+                    title_of_invention = ConvertTab2Apos(reader["title_of_invention"].ToString()),
+                    pt_desc = reader["pt_desc"].ToString(),
+                    spec_doc = reader["spec_doc"].ToString(),
+                    loa_no = reader["loa_no"].ToString(),
+                    loa_doc = reader["loa_doc"].ToString(),
+                    claim_no = reader["claim_no"].ToString(),
+                    claim_doc = reader["claim_doc"].ToString(),
+                    pct_no = reader["pct_no"].ToString(),
+                    pct_doc = reader["pct_doc"].ToString(),
+                    doa_no = reader["doa_no"].ToString(),
+                    doa_doc = reader["doa_doc"].ToString(),
+                    log_staff = reader["log_staff"].ToString(),
+                    reg_date = reader["reg_date"].ToString(),
+                    xvisible = reader["xvisible"].ToString()
+                };
+                list.Add(item);
+            }
+            reader.Close();
+            return list;
+        }
+
+        public List<PtInfo> getPtInfoByPwalletID2(string ID)
+        {
+            List<PtInfo> list = new List<PtInfo>();
+            new PtInfo();
+            SqlConnection connection = new SqlConnection(ConnectPt());
+            SqlCommand command = new SqlCommand("SELECT * FROM pt_info WHERE reg_number='" + ID + "' ", connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read())
+            {
+                PtInfo item = new PtInfo
+                {
+                    xID = reader["xID"].ToString(),
+                    reg_number = reader["reg_number"].ToString(),
+                    xtype = reader["xtype"].ToString(),
+                    title_of_invention = ConvertTab2Apos(reader["title_of_invention"].ToString()),
+                    pt_desc = reader["pt_desc"].ToString(),
+                    spec_doc = reader["spec_doc"].ToString(),
+                    loa_no = reader["loa_no"].ToString(),
+                    loa_doc = reader["loa_doc"].ToString(),
+                    claim_no = reader["claim_no"].ToString(),
+                    claim_doc = reader["claim_doc"].ToString(),
+                    pct_no = reader["pct_no"].ToString(),
+                    pct_doc = reader["pct_doc"].ToString(),
+                    doa_no = reader["doa_no"].ToString(),
+                    doa_doc = reader["doa_doc"].ToString(),
+                    log_staff = reader["log_staff"].ToString(),
+                    reg_date = reader["reg_date"].ToString(),
+                    xvisible = reader["xvisible"].ToString()
+                };
+                list.Add(item);
+            }
+            reader.Close();
+            return list;
+        }
+
+        public string ConvertTab2Apos(string x)
+        {
+            string str = x;
+            if (((x != null) || (x != "")) && x.Contains("|"))
+            {
+                str = x.Replace("|", "'");
+            }
+            return str;
+        }
+
+        public List<Stage> getStageByUserIDAdmin(string validationID)
+        {
+            List<Stage> list = new List<Stage>();
+            SqlConnection connection = new SqlConnection(ConnectPt());
+            SqlCommand command = new SqlCommand("SELECT * FROM pwallet WHERE validationID='" + validationID + "'  AND data_status <>'' ", connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read())
+            {
+                Stage item = new Stage
+                {
+                    ID = reader["ID"].ToString(),
+                    applicantID = reader["applicantID"].ToString(),
+                    validationID = reader["validationID"].ToString(),
+                    stage = reader["stage"].ToString(),
+                    status = reader["status"].ToString(),
+                    data_status = reader["data_status"].ToString(),
+                    amt = reader["amt"].ToString(),
+                    reg_date = reader["reg_date"].ToString()
+                };
+                list.Add(item);
+            }
+            reader.Close();
+            return list;
+        }
+
+        public List<Stage> getStageByUserIDAdmin2(string validationID)
+        {
+            List<Stage> list = new List<Stage>();
+            SqlConnection connection = new SqlConnection(ConnectPt());
+            SqlCommand command = new SqlCommand("SELECT * FROM pwallet WHERE ID='" + validationID + "'  AND data_status <>'' ", connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read())
+            {
+                Stage item = new Stage
+                {
+                    ID = reader["ID"].ToString(),
+                    applicantID = reader["applicantID"].ToString(),
+                    validationID = reader["validationID"].ToString(),
+                    stage = reader["stage"].ToString(),
+                    status = reader["status"].ToString(),
+                    data_status = reader["data_status"].ToString(),
+                    amt = reader["amt"].ToString(),
+                    reg_date = reader["reg_date"].ToString()
+                };
+                list.Add(item);
+            }
+            reader.Close();
+            return list;
+        }
+
         public bool DoLogOutTimer(DateTime exp_date)
         {
             int num = DateTime.Now.CompareTo(exp_date);

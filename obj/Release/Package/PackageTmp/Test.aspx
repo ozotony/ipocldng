@@ -14,37 +14,33 @@
   body {
     display: flex;
     min-height: 100vh;
-    flex-direction: row;
-    margin: 0;
+  
   }
-  .col-1 {
-    background: #D7E8D4;
-    flex: 1;
-  }
-  .col-2 {
-    display: flex;
-    flex-direction: column;
-    flex: 5;
-  }
-  .content {
-    display: flex;
-    flex-direction: row;
-  }
-  .content > article {
-    flex: 3;
-    min-height: 60vh;
-  }
-  .content > aside {
-    background: beige;
-    flex: 1;
-  }
-  header, footer {
-    background: yellowgreen;
-    height: 20vh;
-  }
-  header, footer, article, nav, aside {
-    padding: 1em;
-  }
+
+
+  #container {
+      display:flex;
+      flex-direction:column;
+      width: 100%; 
+  } 
+
+   #content {
+     flex-grow:1;
+     width: 100%; 
+  } 
+
+    #footer {
+     height:50px;
+     
+     width: 100%; 
+     background-color:red;
+      display:flex;
+      justify-content:center;
+  } 
+
+    #footer2 {
+
+    }
 </style>
 
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -54,45 +50,22 @@
 
 </head>
 <body>
-     <div id="app"></div>
-        <script type="text/babel">
-class App extends React.Component {
+     <div id="container">
+            <div id="content">
+<p> Testin</p>
+         
 
+     </div>
 
-render() {
+          <div id="footer">
 
-var rows = this.props.data.map(function(row){
-return <tr>
-<td>{row.when}</td>
-<td>{row.who}</td>
-<td>{row.description}</td>
-</tr>
-            });
-return <div>
-<table>
-<thead>
-<th>When</th>
-<th>Who</th>
-<th>Description</th>
-</thead>
-{rows}
-</table>
+         <p id="footer2"> Testin2 </p>
 
-    </div>
-}
-}
-var mount = document.querySelector('#app');
-var data = [{ "when": "2 minutes ago",
-"who": "Jill Dupre",
-"description": "Created new account"
-},
-{
-"when": "1 hour ago",
-"who": "Lose White",
-"description": "Added fist chapter"
-}];
-ReactDOM.render(<App  data = {data} />, mount);
-</script>
+     </div>
+         
+
+     </div>
+  
 
 
      

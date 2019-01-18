@@ -38,15 +38,15 @@ app.controller('myController3', ['$scope', '$http', '$rootScope', function ($sco
         var vk = $scope.OnlineNumber;
 
 
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate2.ashx';
+        var serviceBase = 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetCertificate2.ashx';
 
         if ($scope.Searchname == "rtm") {
-            serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate6.ashx';
+            serviceBase = 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetCertificate6.ashx';
         }
 
         else {
 
-            serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate7.ashx';
+            serviceBase = 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetCertificate7.ashx';
         }
 
         //  var serviceBase = 'http://localhost:4556/Handlers/GetCertificate2.ashx';
@@ -205,7 +205,7 @@ app.controller('myController2', ['$scope', '$http', '$rootScope', function ($sco
         var vk = $scope.OnlineNumber;
 
 
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate.ashx';
+        var serviceBase = 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetCertificate.ashx';
 
         // var serviceBase = 'http://localhost:4556/Handlers/GetRegistration.ashx';
 
@@ -312,7 +312,7 @@ app.controller('myController4', ['$scope', '$http', '$rootScope', function ($sco
         $scope.rep_xname = xname2;
         $scope.country2 = "Nigeria";
         $scope.country3 = "Nigeria";
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetRegistration3.ashx';
+        var serviceBase = 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetRegistration3.ashx';
         var Encrypt = {
             vid: xname
         }
@@ -355,7 +355,7 @@ app.controller('myController4', ['$scope', '$http', '$rootScope', function ($sco
         var vk = $scope.OnlineNumber;
 
 
-        var serviceBase = 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCertificate2.ashx';
+        var serviceBase = 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetCertificate2.ashx';
 
         //  var serviceBase = 'http://localhost:4556/Handlers/GetCertificate2.ashx';
 
@@ -468,7 +468,7 @@ function (isConfirm) {
     function GetCountries() {
         $http({
             method: 'GET',
-            url: 'http://88.150.164.30/IpoCldng/Handlers/Getcountry.ashx'
+            url: 'http://5.77.54.44/IpoCldng/Handlers/Getcountry.ashx'
         }).success(function (data, status, headers, config) {
             var dd = data;
             $scope.countries = data;
@@ -480,7 +480,7 @@ function (isConfirm) {
     function GetClass() {
         $http({
             method: 'GET',
-            url: 'http://88.150.164.30/EinaoTestEnvironment.IPO/Handlers/GetCldClass.ashx'
+            url: 'http://5.77.54.44/EinaoTestEnvironment.IPO/Handlers/GetCldClass.ashx'
         }).success(function (data, status, headers, config) {
             var dd = data;
             $scope.vclass = data;
@@ -520,7 +520,7 @@ function (isConfirm) {
 
             $http({
                 method: 'POST',
-                url: 'http://88.150.164.30/IpoCldng/Handlers/GetState.ashx',
+                url: 'http://5.77.54.44/IpoCldng/Handlers/GetState.ashx',
                 transformRequest: function (obj) {
                     var str = [];
                     for (var p in obj)
@@ -662,7 +662,7 @@ function (isConfirm) {
 
             formData.append("vv", JSON.stringify(AgentsData));
 
-            var url9 = "http://88.150.164.30/EinaoTestEnvironment.CLD/Handlers/Save_GenericApplication.ashx";
+            var url9 = "http://5.77.54.44/EinaoTestEnvironment.CLD/Handlers/Save_GenericApplication.ashx";
 
 
             $http.post(url9, formData, {
@@ -720,7 +720,7 @@ function (isConfirm) {
 
 function IpoTradeMarks2(email, name, address, vid, PhoneNumber, vonlineid) {
 
-    postwith('http://88.150.164.30/EinaoTestEnvironment.Payx/A/m_payx.aspx', {
+    postwith('http://5.77.54.44/EinaoTestEnvironment.Payx/A/m_payx.aspx', {
 
         //   postwith('http://localhost:21327/A/m_payx.aspx', {
 
@@ -740,7 +740,7 @@ function IpoTradeMarks2(email, name, address, vid, PhoneNumber, vonlineid) {
 
 function IpoTradeMarks3(email, name, address, vid, PhoneNumber, vonlineid, name2, address2, email2, PhoneNumber2) {
 
-   postwith('http://88.150.164.30/EinaoTestEnvironment.Payx/A/m_payx.aspx', {
+    postwith('http://5.77.54.44/EinaoTestEnvironment.Payx/A/m_payx.aspx', {
 
      //   postwith('http://localhost:21327/A/m_payx.aspx', {
 

@@ -22,6 +22,13 @@
         .auto-style1 {
             height: 100px;
         }
+
+          #flyout_menu2 a {
+    color: #FFF;
+    line-height: 80%;
+    padding:0px;
+}
+
        
     </style>
     <script type="text/javascript">
@@ -29,31 +36,7 @@
         </script>
 
    
-
-    <style type="text/css">
-        #flyout_menu2 {
-            position:relative;
-        }
-
-         #flyout_menu2 a {
-            position:absolute;
-            top:1px;
-            left:10%
-        }
-
-         #kad {
- position:absolute;
-            top:70px;
-            left:1%
-
-         }
-
-         #kad a {
-            display:inline-block;
-            padding-top:2px;
-             padding-left:14px;
-         }
-    </style>
+  
    
 </head>
 <body ng-controller="formController">
@@ -406,21 +389,49 @@
     </div>
 
 <div id="ads" style="color:#fff;text-align:center;font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: 600;" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-    
-    <div id="flyout_menu2"> 
-<div class="row">
+  
+    <div id="flyout_menu2" style="display:flex;flex-direction:column"> 
 
-    <div ng-show="xvv" style="margin-top:20px" >
+<br />
+
+    <div ng-show="xvv"   >
   <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3">UNREAD MESSAGE  </span>   <a href="./profile4.aspx" class="blinkytext col-xs-2 col-sm-2 col-md-2 col-lg-2 " > <blink > <span id="Span1" class="label label-danger" ng-bind="vcount" style="float:left"></span> </blink> </a>
 
       
     </div>
 
-    </div>
 
-        <div class="row">
-            <span class="glyphicon glyphicon-envelope" id ="kad" style="text-align:left"><a href="./profile4.aspx"  style="color:white;"  > INBOX</a></span>
+
+        <div style="display:flex ;" >
+           
+            <div  >
+               <span class="" style="margin-top:12px"  >  </span>
             </div>
+            <div  style="margin-right:auto">
+             <span class="glyphicon glyphicon-envelope" style="margin-top:12px"  >   <a href="./profile4.aspx"  style="color:white;"  > INBOX</a> </span>
+            </div>
+          
+              </div>
+         <div  >
+           
+           <span class="alert alert-info fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+<strong>Switch to upgraded Site</strong>  <a href="http://5.77.54.44/Newcld"  target="_blank" style="position: relative;color: #31708f;" class="alert-link">Click</a>
+    
+</span>
+            </div>
+
+        
+         <div >
+           
+           <span class="alert alert-info fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+<strong>Download Our Mobile App </strong>  <a href="https://play.google.com/store/apps/details?id=org.nativescript.NativeApp"  target="_blank" style="position: relative;color: #31708f;" class="alert-link">Download</a>
+    
+</span>
+            </div>
+
+            
    
     </div>
         </div>

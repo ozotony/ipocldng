@@ -47,4 +47,6 @@ C:\Einao\VS Source\Projects\IpongBackup\bin\log4net.dll
 C:\Einao\VS Source\Projects\IpongBackup\bin\EPPlus.xml
 C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.dll
 C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.pdb
-C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.csprojResolveAssemblyReference.cache
+C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.csprojAssemblyReference.cache
+C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.csproj.CoreCompileInputs.cache
+C:\Einao\VS Source\Projects\IpongBackup\obj\Release\Ipong.csproj.CopyComplete

@@ -103,7 +103,7 @@ namespace Ipong
 
         protected void Page_Load(object sender, EventArgs e)
         {
-          //  Response.Redirect("http://www.iponigeria.com/");
+           Response.Redirect("http://www.iponigeria.com/");
             if (!(Page.IsPostBack)) {
                 string id = Request.Form["x3"];
 

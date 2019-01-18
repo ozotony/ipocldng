@@ -45,5 +45,6 @@ namespace Ipong.Handlers
         public String Letter_Intro_file { get; set; }
 
         public String passport_file { get; set; }
+        public String xid { get; set; }
     }
 }

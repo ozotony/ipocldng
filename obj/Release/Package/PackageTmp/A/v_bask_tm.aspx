@@ -198,8 +198,8 @@
     
         <tr>
             <td class="center-align">
-                <asp:GridView ID="gvTm" runat="server" AutoGenerateColumns="False" 
-                    DataKeyNames="xid" DataSourceID="flTmUnused"  EnableModelValidation="True" 
+                <asp:GridView ID="gvTm" runat="server" OnPageIndexChanging="gridView_PageIndexChanging" AutoGenerateColumns="False" 
+                    DataKeyNames="xid"   EnableModelValidation="True" 
                     style="margin-top: 0px; width:100%;" onrowcommand="gvTm_RowCommand" 
                     CellPadding="4" ForeColor="#333333" CaptionAlign="Left" 
                     HorizontalAlign="Left"  AllowSorting="True" 
@@ -239,7 +239,7 @@
                         <ItemStyle HorizontalAlign="Left" />
                         </asp:BoundField>
                         
-                        <asp:BoundField DataField="init_amt" HeaderText="AMT" ReadOnly="True" 
+                        <asp:BoundField DataField="init_amt" DataFormatString="{0:###,###,###.00}" HeaderText="AMT" ReadOnly="True" 
                             SortExpression="init_amt" >
                              <HeaderStyle HorizontalAlign="Center" Width="50px"/>
                            <ItemStyle HorizontalAlign="Right" />
@@ -276,13 +276,13 @@
                      INNER JOIN twallet ON  twallet.xid=fee_details.twalletID 
                      INNER JOIN applicant ON  twallet.applicantID=applicant.xid 
                      INNER JOIN hwallet ON hwallet.fee_detailsID=fee_details.xid 
-                     where fee_list.xcategory='tm' AND twallet.xmemberID=@getAdminID2 AND twallet.xpay_status='1' AND hwallet.used_status='Not used' 
+                     where fee_list.xcategory='tm' AND twallet.xmemberID=@getAdminID6 AND twallet.xpay_status='1' AND hwallet.used_status='Not used' 
                        
                      ">
                   
                      
                        <SelectParameters>
-                       <asp:ControlParameter ControlID="xadminID" Name="getAdminID2" PropertyName="Value" Type="String" />
+                       <asp:ControlParameter ControlID="xadminID" Name="getAdminID6" PropertyName="Value" Type="String" />
                    </SelectParameters>
                 </asp:SqlDataSource>                  
                                  

@@ -628,6 +628,49 @@ namespace Ipong.Classes
             connection.Close();
             return succ;
         }
+
+
+        public string updateAgProfileDocz2(string logo_doc, string pwalletID)
+        {
+            string connectionString = this.ConnectXhome();
+            string succ = "";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "UPDATE registrations SET logo=@logo_doc WHERE xID=@pwalletID ";
+            connection.Open();
+            
+            command.Parameters.Add("@logo_doc", SqlDbType.Text);
+            command.Parameters.Add("@pwalletID", SqlDbType.NVarChar);
+
+            
+            command.Parameters["@logo_doc"].Value = logo_doc;
+            command.Parameters["@pwalletID"].Value = pwalletID;
+
+            succ = command.ExecuteNonQuery().ToString();
+            connection.Close();
+            return succ;
+        }
+
+        public string updateAgProfileDocz3(string pwalletID)
+        {
+            string connectionString = this.ConnectXhome();
+            string succ = "";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "delete from  registrations   WHERE xid=@pwalletID ";
+            connection.Open();
+
+          
+            command.Parameters.Add("@pwalletID", SqlDbType.NVarChar);
+
+
+          //  command.Parameters["@logo_doc"].Value = logo_doc;
+            command.Parameters["@pwalletID"].Value = pwalletID;
+
+            succ = command.ExecuteNonQuery().ToString();
+            connection.Close();
+            return succ;
+        }
         public string updateSubAgProfileDocz(string pic_doc,string pwalletID)
         {
             string connectionString = this.ConnectXhome();

@@ -189,6 +189,8 @@ dl,dd {
 
               <b>   <a href="./Assignment_Trademark3.aspx" >   <dl class="dl-horizontal"> <dt>  FORM 47 - </dt>  <dd>REGISTERED USERS </dd> </dl> </a> </b>
 
+                 <b>   <a href="./AlterationPatent_Recordal.aspx" >   <dl class="dl-horizontal"> <dt>  POO7  - </dt>  <dd>APPLICATION FOR ALTERATION IN THE REGISTER OF PATENTS </dd> </dl> </a> </b>
+
             </td>
        
           

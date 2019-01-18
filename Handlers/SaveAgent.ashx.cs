@@ -150,7 +150,7 @@ namespace Ipong.Handlers
 
                 mail.IsBodyHtml = true;
                 String ss2 = "Dear " + vcompany + ",<br/> <br/>"  + " Thank you for completing the accreditation form for Agents of Trademarks, Patents and Designs Registry.<br/>";
-                ss2 = ss2 + "To gain access to your account, you would need to click here <a href=\"http://88.150.164.30/IpoNigeria/#/Register/" + vid + " \">click</a>   to validate your account and also make payment. " + "<br/><br/><br/>";
+                ss2 = ss2 + "To gain access to your account, you would need to click here <a href=\"http://5.77.54.44/IpoNigeria/#/Register/" + vid + " \">click</a>   to validate your account and also make payment. " + "<br/><br/><br/>";
 
                 ss2 = ss2 + "Please keep your password safe and do not share your log in details with anyone. You may change your password at your convenience. In the event that you cannot remember your password, kindly follow the instructions provided for password recovery.<br/><br/>";
 
@@ -176,7 +176,7 @@ namespace Ipong.Handlers
 
                 mail.Body = ss;
 
-                SmtpClient client = new SmtpClient("88.150.164.30");
+                SmtpClient client = new SmtpClient("5.77.54.44");
                 //  SmtpClient client = new SmtpClient("192.168.0.12");
 
                 client.Port = port;
